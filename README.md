@@ -10,6 +10,8 @@ Welcome to the Ocean-Minded project! This website is designed for a travel compa
 - [🌐 Usage](#usage)
 - [💬 Get in Touch](#get-in-touch)
 
+<a name="why-choose-us"></a>
+
 ## 🙌 Why Choose Us?
 
 At Ocean-Minded, we curate unique experiences that connect you with the wonders of the sea. Here’s why you should choose us:
@@ -18,6 +20,8 @@ At Ocean-Minded, we curate unique experiences that connect you with the wonders 
 - **Sustainable Practices**: we prioritize eco-friendly practices to protect our oceans for future generations.
 - **Tailored Experiences**: from family vacations to romantic getaways, we customize our packages to suit your needs.
 
+<a name="technologies-used"></a>
+
 ## 🛠️ Technologies Used
 
 We leverage cutting-edge technologies to provide you with a seamless online experience:
@@ -25,6 +29,8 @@ We leverage cutting-edge technologies to provide you with a seamless online expe
 - **Node.js**: a powerful JavaScript runtime, used for building scalable and efficient network applications.
 - **Express.js**: our web framework of choice for building a web server and handling routing with ease.
 - **EJS**: embedded JavaScript templating that enables us to render dynamic and engaging webpages.
+
+<a name="installation"></a>
 
 ## ✨ Installation
 
@@ -59,9 +65,13 @@ node index.js
 4. **Open your browser**
    Navigate to http://localhost:3000 to dive into the Ocean-Minded experience!
 
+<a name="usage"></a>
+
 ## 🌐 Usage
 
 Once the server is running, you can explore the website for the travel company. Your sea adventure awaits!
+
+<a name="get-in-touch"></a>
 
 ## 💬 Get in Touch
 
