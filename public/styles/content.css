@@ -20,6 +20,10 @@ main {
   text-align: center;
 }
 
+.no-padding {
+  padding: 0;
+}
+
 .card {
   background-size: cover; /* Cover the entire card */
   background-position: center; /* Center the image */
