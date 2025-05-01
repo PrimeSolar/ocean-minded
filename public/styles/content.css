@@ -20,6 +20,11 @@ main {
   text-align: center;
 }
 
+.card {
+  background-size: cover; /* Cover the entire card */
+  background-position: center; /* Center the image */
+}
+
 /* The Title Style Rules */
 
 h1 {
@@ -104,6 +109,14 @@ p {
   .container p:last-of-type {
     margin: 4vh 0 11vh;
   }
+}
+
+.teammate {
+  width: 70px;
+  height: 70px;
+  background-size: cover;
+  background-position: center;
+  border-radius: 50%;
 }
 
 .copyright {
