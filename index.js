@@ -13,6 +13,14 @@ app.get("/about", (req, res) => {
   res.render("about.ejs");
 });
 
+app.get("/services", (req, res) => {
+  res.render("services.ejs");
+});
+
+app.get("/team", (req, res) => {
+  res.render("team.ejs");
+});
+
 app.get("/contact", (req, res) => {
   res.render("contact.ejs");
 });
