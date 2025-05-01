@@ -240,22 +240,23 @@ ul {
   padding: 0;
 }
 
-#custom-cards {
-  padding: 5vh 25px 17.37vh; /* Set the padding for the element */
-  border-radius: 8px; /* Set the border radius for the element */
+#custom-cards,
+#badge-grid {
+  padding: 5vh 25px 17.37vh !important; /* Set the padding for the element */
   background-color: #ffffff; /* Set the background color for the element */
-  box-shadow: 0 4px 10px #0000001a; /* Set the shadow for the element */
 }
 
 @media (max-width: 1280px) {
-  #custom-cards {
-    padding: 5vh 25px 15vh; /* Set the padding for the element */
+  #custom-cards,
+  #badge-grid {
+    padding: 5vh 25px 15vh !important; /* Set the padding for the element */
   }
 }
 
 @media (max-width: 600px) {
-  #custom-cards {
-    padding: 7vh 25px 10vh; /* Set the padding for the element */
+  #custom-cards,
+  #badge-grid {
+    padding: 7vh 25px 10vh !important; /* Set the padding for the element */
   }
 }
 
