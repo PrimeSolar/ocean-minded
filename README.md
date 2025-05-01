@@ -1,6 +1,6 @@
 # 🌊 Ocean-Minded: Dive into Beautiful Ocean Adventures! 🌊
 
-Welcome to the Ocean-Minded project! This website is designed for a travel company that specializes in creating unforgettable experiences that connect clients with the beauty of the ocean world.
+Welcome to the Ocean-Minded project! This web application is designed for a travel company that specializes in creating unforgettable experiences that connect clients with the beauty of the ocean world.
 
 ## Table of Contents
 
@@ -69,7 +69,7 @@ node index.js
 
 ## 🌐 Usage
 
-Once the server is running, you can explore the website for the travel company. Your sea adventure awaits!
+Once the server is running, you can explore the web application for the travel company. Your sea adventure awaits!
 
 <a name="get-in-touch"></a>
 
