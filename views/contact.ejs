@@ -1,11 +1,22 @@
 <%- include("partials/header.ejs") %>
 
-<h1 class="title">Contact Us</h1>
-<form>
-  <input name="name" type="text" class="feedback-input" placeholder="Name" />
-  <input name="email" type="text" class="feedback-input" placeholder="Email" />
-  <textarea name="text" class="feedback-input" placeholder="Comment"></textarea>
-  <input type="submit" value="SUBMIT" />
-</form>
+<main class="container">
+  <h1 class="title">Contact Us</h1>
+  <form>
+    <input name="name" type="text" class="feedback-input" placeholder="Name" />
+    <input
+      name="email"
+      type="text"
+      class="feedback-input"
+      placeholder="Email"
+    />
+    <textarea
+      name="text"
+      class="feedback-input"
+      placeholder="Comment"
+    ></textarea>
+    <input type="submit" value="SUBMIT" />
+  </form>
+</main>
 
 <%- include("partials/footer.ejs") %>
