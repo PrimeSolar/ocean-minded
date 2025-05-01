@@ -70,16 +70,16 @@ i.fa-bars {
 }
 
 #navbarSupportedContent a:not(:only-child):after {
-  content: "\f105";
-  position: absolute;
-  right: 20px;
-  top: 10px;
-  font-size: 14px;
-  font-family: "Font Awesome 5 Free";
+  content: "\f105"; /* Font Awesome Badge */
   display: inline-block;
+  position: absolute;
+  top: 10px;
+  right: 20px;
   padding-right: 3px;
   vertical-align: middle;
+  font-size: 14px;
   font-weight: 900;
+  font-family: "Font Awesome 5 Free";
   transition: 0.5s;
 }
 
@@ -94,15 +94,15 @@ i.fa-bars {
 .hori-selector {
   display: inline-block;
   position: absolute;
-  height: 100%;
   top: 0px;
   left: 0px;
-  transition-duration: 0.6s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
-  background-color: #ffffff;
+  margin-top: 10px;
+  height: 100%;
   border-top-left-radius: 15px;
   border-top-right-radius: 15px;
-  margin-top: 10px;
+  background-color: #ffffff;
+  transition-duration: 0.6s;
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
 }
 
 .hori-selector .right,
@@ -110,8 +110,8 @@ i.fa-bars {
   position: absolute;
   width: 25px;
   height: 25px;
-  background-color: #ffffff;
   bottom: 10px;
+  background-color: #ffffff;
 }
 
 .hori-selector .right {
@@ -162,9 +162,9 @@ i.fa-bars {
   .navbar-expand-custom .navbar-collapse {
     display: -ms-flexbox !important;
     display: flex !important;
-    -ms-flex-preferred-size: auto;
-    flex-basis: auto;
     flex-direction: row-reverse;
+    flex-basis: auto;
+    -ms-flex-preferred-size: auto;
   }
 }
 
@@ -196,8 +196,8 @@ i.fa-bars {
   }
 
   .hori-selector .left:before {
-    left: -25px;
     top: -25px;
+    left: -25px;
   }
 
   .hori-selector .right:before {
@@ -240,19 +240,38 @@ ul {
   padding: 0;
 }
 
+#custom-cards {
+  padding: 5vh 25px 17.37vh; /* Set the padding for the element */
+  border-radius: 8px; /* Set the border radius for the element */
+  background-color: #ffffff; /* Set the background color for the element */
+  box-shadow: 0 4px 10px #0000001a; /* Set the shadow for the element */
+}
+
+@media (max-width: 1280px) {
+  #custom-cards {
+    padding: 5vh 25px 15vh; /* Set the padding for the element */
+  }
+}
+
+@media (max-width: 600px) {
+  #custom-cards {
+    padding: 7vh 25px 10vh; /* Set the padding for the element */
+  }
+}
+
 footer {
   position: relative;
   width: 100%;
-  background: #3586ff;
-  min-height: 100px;
-  height: 5vh;
   max-height: 5vh;
+  height: 5vh;
+  min-height: 100px;
   padding: 20px 50px;
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  color: white;
+  background-color: #3586ff;
+  color: #ffffff;
 }
 
 footer .social_icon,
@@ -280,7 +299,7 @@ footer .social_icon li a {
 
 footer .social_icon li a:hover {
   transform: translateY(-15px);
-  color: blue;
+  color: #0000ff;
 }
 
 footer a {
