@@ -6,7 +6,7 @@ Welcome to the Ocean-Minded project! This web application is designed for a trav
   - [Why Choose Us? 🙌](#why-choose-us-)
   - [Technologies Used 🛠️](#technologies-used-️)
   - [Installation ✨](#installation-)
-  - [Usage 🌐](#usage-)
+  - [Usage 🏄‍♂️](#usage-️)
   - [Support My Work ☕](#support-my-work-)
   - [Contact Me 💬](#contact-me-)
 
@@ -67,7 +67,7 @@ node index.js
 
 <a name="usage"></a>
 
-## Usage 🌐
+## Usage 🏄‍♂️
 
 Once the server is running, you can explore the web application for the travel company. Your sea adventure awaits!
 
