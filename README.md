@@ -1,14 +1,23 @@
 # 🌊 Ocean-Minded: Dive into Beautiful Ocean Adventures! 🌊
 
-Welcome to the Ocean-Minded project! This web application is designed for a travel company that specializes in creating unforgettable experiences that connect clients with the beauty of the ocean world.
+Welcome to the Ocean-Minded project! This web application is designed for a travel company that specializes in creating wonderful experiences that connect clients with the beauty of the ocean world.
 
 - [🌊 Ocean-Minded: Dive into Beautiful Ocean Adventures! 🌊](#-ocean-minded-dive-into-beautiful-ocean-adventures-)
+  - [Interface 🌐](#interface-)
   - [Why Choose Us? 🙌](#why-choose-us-)
   - [Technologies Used 🛠️](#technologies-used-️)
   - [Installation ✨](#installation-)
   - [Usage 🏄‍♂️](#usage-️)
   - [Support My Work ☕](#support-my-work-)
   - [Contact Me 💬](#contact-me-)
+
+<a name="interface"></a>
+
+## Interface 🌐
+
+![Ocean-Minded](public/images/interface.jpg)
+
+_The Ocean-Minded Interface_
 
 <a name="why-choose-us"></a>
 
@@ -80,7 +89,7 @@ Every cup of coffee you buy not only fuels my passion but also allows me to dedi
 **Click the image to support my work:**
 
 <a href="https://coff.ee/cocacola">
-    <img src="public/images/coffee.jpg" width="370" height="auto" alt="Buy Me a Coffee"/>
+  <img src="public/images/coffee.jpg" width="370" height="auto" alt="Buy Me a Coffee"/>
 </a>
 
 Thank you for your support! Together, we can create something wonderful! 💖
