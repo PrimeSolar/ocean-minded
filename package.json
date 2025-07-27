@@ -22,6 +22,10 @@
     "sea"
   ],
   "author": "Vladislav Kazantsev",
+  "funding": {
+    "type": "donate",
+    "url": "https://coff.ee/cocacola"
+  },
   "dependencies": {
     "ejs": "^3.1.9",
     "express": "^5.1.0"
