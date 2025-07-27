@@ -4,7 +4,10 @@ body {
 }
 
 body {
-  display: flex;
+  /* Use flexbox to center content inside the element */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
+  display: flex; /* Standard syntax for modern browsers (widely supported) */
   flex-direction: column;
   justify-content: stretch;
 }
@@ -24,9 +27,29 @@ main {
   padding: 0;
 }
 
+/* Card Container Styles */
+
 .card {
-  background-size: cover; /* Cover the entire card */
-  background-position: center; /* Center the image */
+  background-color: #ffffffe6; /* Set the color for the background of the element */
+  background-size: cover; /* Set the size for the background of the element */
+  background-position: center; /* Set the position for the background of the element */
+  box-shadow: 0 8px 20px #ffffff; /* Set the shadow for the element */
+  border-width: 0; /* Set the width for the border of the element */
+  /* Apply the border radius to round the corners of the element */
+  -moz-border-radius: 12px; /* For older versions of Firefox */
+  -o-border-radius: 12px; /* For older versions of Opera */
+  -webkit-border-radius: 12px; /* For older versions of Chrome and Safari */
+  border-radius: 12px; /* Standard syntax for modern browsers (widely supported) */
+  /* Set an effect of a transition for the element */
+  -webkit-transition: transform 0.25s, box-shadow 0.25s; /* For older versions of Chrome and Safari */
+  -o-transition: transform 0.25s, box-shadow 0.25s; /* For older versions of Opera */
+  transition: transform 0.25s, box-shadow 0.25s; /* Standard syntax for modern browsers (widely supported) */
+}
+
+/* Card Hover Effect */
+.card:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
 }
 
 /* The Title Style Rules */
@@ -37,11 +60,11 @@ h1 {
 
 .title {
   width: fit-content; /* Set the width for the element */
-  margin: 2.5vh auto 0; /* Set the margin for the element */
+  margin: 30px auto; /* Set the margin for the element */
   line-height: 1.5; /* Set the line height for the element */
   font-size: 2.5em; /* Set the font size for the element */
   text-align: center; /* Set the horizontal position for the element text */
-  background: linear-gradient(to right, #007fff, #5597ff);
+  background: linear-gradient(to right, #5597ff, #00bfff);
   background-clip: text;
   -webkit-text-fill-color: transparent; /* Set the color for the element text */
   animation: brighten 1s;
@@ -52,14 +75,22 @@ h1.title {
   margin: 2.5vh auto; /* Set the margin for the element */
 }
 
+#custom-cards .title,
+#badge-grid .title {
+  color: #ffffff;
+  -webkit-text-fill-color: unset;
+}
+
 @media (max-width: 600px) {
   .title {
-    font-size: 2em; /* Set the font size for the element */
+    font-size: 2em; /* Set the size for the font of the element */
   }
 }
 
 h2 {
-  color: #5597ff;
+  background: linear-gradient(to right, #5597ff, #00bfff);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; /* Set the color for the text of the element */
   animation: brighten 1s;
 }
 
@@ -72,7 +103,7 @@ h2 {
   }
 }
 
-/* The Paragraph Style Rules */
+/* Paragraph Style Rules */
 
 p {
   margin-top: 15px;
@@ -89,7 +120,10 @@ p {
   font-size: 1.1em; /* Set the font size for the element */
   text-align: justify; /* Set the position for the element text */
   background-color: #f9f9f9; /* Set the background color for the element */
-  transition: background-color 0.3s; /* Set the transition effect for the element */
+  /* Set an effect of a transition for the element */
+  -webkit-transition: background-color 0.3s; /* For older versions of Chrome and Safari */
+  -o-transition: background-color 0.3s; /* For older versions of Opera */
+  transition: background-color 0.3s; /* Standard syntax for modern browsers (widely supported) */
 }
 
 .container p:hover {
@@ -116,11 +150,14 @@ p {
 }
 
 .teammate {
-  width: 70px;
-  height: 70px;
-  background-size: cover;
-  background-position: center;
-  border-radius: 50%;
+  display: inline-block !important; /* Set the position for the element */
+  margin: 10px 0 15px;
+  width: 170px; /* Set the width for the element */
+  height: 170px; /* Set the height for the element */
+  background-size: cover; /* Set the size for the background of the element */
+  background-position: center; /* Set the position for the background of the element */
+  border-radius: 50%; /* Set the border radius for the element */
+  box-shadow: 0 4px 10px #0000001a; /* Set the shadow for the element */
 }
 
 .copyright {
@@ -140,7 +177,7 @@ p {
 .logo {
   display: block; /* Set the position for the element */
   max-width: 35%; /* Set the maximum width for the element */
-  height: auto; /* MSet the height for the element */
+  height: auto; /* Set the height for the element */
   margin: 5.5vh auto 0; /* Set the margin for the element */
   object-fit: cover;
   border-radius: 50%;
@@ -150,6 +187,57 @@ p {
 @media (max-width: 600px) {
   .logo {
     max-width: 50%; /* Set the maximum width for the element */
+  }
+}
+
+to-top {
+  background-color: #0088ff; /* Set the color of the background */
+  position: fixed; /* Set the position for the element */
+  right: 25px; /* Position the element relative to the right edge of its nearest positioned ancestor */
+  width: 45px; /* Set the width of the element */
+  height: 45px; /* Set the height of the element */
+  opacity: 0; /* Set the opacity */
+  z-index: 2; /* Set the stacking order of the element */
+  font-size: 16px; /* Set the font size for the text */
+  text-decoration: none; /* Remove underline from the text */
+  pointer-events: none; /* Deactivate pointer events */
+  /* Set an effect of a transition for the element */
+  -webkit-transition: 0.25s; /* For older versions of Chrome and Safari */
+  -o-transition: 0.25s; /* For older versions of Opera */
+  transition: 0.25s; /* Standard syntax for modern browsers (widely supported) */
+  /* Use flexbox to center content inside the element */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
+  display: flex; /* Standard syntax for modern browsers (widely supported) */
+
+  justify-content: center; /* Align flex items horizontally */
+
+  /* Align vertically */
+  -ms-flex-align: center; /* For Internet Explorer 10 */
+  -webkit-box-align: center; /* For older versions of Chrome and Safari */
+  align-items: center; /* Standard syntax for modern browsers (widely supported) */
+  /* Apply the border radius to round the corners of the element */
+  -moz-border-radius: 50%; /* For older versions of Firefox */
+  -o-border-radius: 50%; /* For older versions of Opera */
+  -webkit-border-radius: 50%; /* For older versions of Chrome and Safari */
+  border-radius: 50%; /* Standard syntax for modern browsers (widely supported) */
+}
+
+to-top.active {
+  bottom: calc(5vh + 175px);
+  pointer-events: auto;
+  opacity: 1;
+}
+
+@media (max-width: 500px) {
+  to-top.active {
+    bottom: calc(5vh + 159px);
+  }
+}
+
+@media (max-height: 500px) {
+  to-top.active {
+    bottom: calc(5vh + 190px);
   }
 }
 
@@ -166,10 +254,17 @@ form {
   line-height: 22px;
   font-size: 18px;
   font-weight: 500;
-  border-radius: 5px;
   outline: 0;
   background-color: transparent;
-  transition: all 0.3s;
+  /* Apply the border radius to round the corners of the element */
+  -moz-border-radius: 5px; /* For older versions of Firefox */
+  -o-border-radius: 5px; /* For older versions of Opera */
+  -webkit-border-radius: 5px; /* For older versions of Chrome and Safari */
+  border-radius: 5px; /* Standard syntax for modern browsers (widely supported) */
+  /* Set an effect of a transition for the element */
+  -webkit-transition: all 0.3s; /* For older versions of Chrome and Safari */
+  -o-transition: all 0.3s; /* For older versions of Opera */
+  transition: all 0.3s; /* Standard syntax for modern browsers (widely supported) */
 }
 
 .feedback-input:focus {
@@ -184,17 +279,24 @@ textarea {
 
 [type="submit"] {
   width: 100%;
-  background: #3586ff;
-  border-radius: 5px;
+  background: #3587ff;
   border: 0;
   cursor: pointer;
   color: #ffffff;
   font-size: 24px;
   padding-top: 10px;
   padding-bottom: 10px;
-  transition: all 0.3s;
   margin-top: -4px;
   font-weight: 700;
+  /* Apply the border radius to round the corners of the element */
+  -moz-border-radius: 5px; /* For older versions of Firefox */
+  -o-border-radius: 5px; /* For older versions of Opera */
+  -webkit-border-radius: 5px; /* For older versions of Chrome and Safari */
+  border-radius: 5px; /* Standard syntax for modern browsers (widely supported) */
+  /* Set an effect of a transition for the element */
+  -webkit-transition: all 0.3s; /* For older versions of Chrome and Safari */
+  -o-transition: all 0.3s; /* For older versions of Opera */
+  transition: all 0.3s; /* Standard syntax for modern browsers (widely supported) */
 }
 
 [type="submit"]:hover {
