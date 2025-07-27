@@ -9,7 +9,11 @@
 
 body {
   line-height: 1.6; /* Set the line height for the element */
-  background-color: #f0f8ff; /* Set the background color for the element */
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
   color: #2a2a2a; /* Set the text color for the element */
 }
 
@@ -160,8 +164,10 @@ i.fa-bars {
   }
 
   .navbar-expand-custom .navbar-collapse {
-    display: -ms-flexbox !important;
-    display: flex !important;
+    /* Use flexbox to center content inside the element */
+    display: -ms-flexbox !important; /* For Internet Explorer 10 (supports an earlier flexbox model */
+    display: -webkit-box !important; /* For earlier versions of Chrome and Safari (pre-flexbox) */
+    display: flex !important; /* Standard syntax for modern browsers (widely supported) */
     flex-direction: row-reverse;
     flex-basis: auto;
     -ms-flex-preferred-size: auto;
@@ -212,13 +218,16 @@ i.fa-bars {
   margin: 5vh auto 0; /* Set the margin for the element */
   padding: 0 20px 10vh; /* Set the padding for the element */
   max-width: 800px; /* Set the maximum width for the element */
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
   align-items: center;
   background-color: #ffffff; /* Set the background color for the element */
   border-radius: 8px; /* Set the border radius for the element */
   box-shadow: 0 4px 10px #0000001a; /* Set the shadow for the element */
+  /* Use flexbox to center content inside the element */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
+  display: flex; /* Standard syntax for modern browsers (widely supported) */
+  flex-direction: column;
+  justify-content: center;
 }
 
 /* The Container Responsive Style Rules */
@@ -243,13 +252,79 @@ ul {
 #custom-cards,
 #badge-grid {
   padding: 5vh 25px 17.37vh !important; /* Set the padding for the element */
-  background-color: #ffffff; /* Set the background color for the element */
+  background-image: url(../images/background.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: 100vw 100vh;
+  background-attachment: fixed;
+  color: #ffffff;
 }
+
+#badge-grid {
+  background-color: rgba(
+    255,
+    255,
+    255,
+    0.8
+  ); /* Set the background color for the element */
+  border-radius: 12px; /* Set the border radius for the element */
+  padding: 40px; /* Set the padding for the element */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Set the shadow for the element */
+}
+
+@media (max-width: 600px) {
+  #badge-grid {
+    padding: 20px; /* Reduced padding on smaller screens */
+  }
+}
+
+#custom-cards p,
+#badge-grid p,
+#badge-grid h3 {
+  color: #ffffff !important;
+}
+
+#badge-grid .col {
+  padding: 15px; /* Set the padding for the element */
+  margin: 10px; /* Set the margin for the element */
+  align-items: center; /* Set the alignment for the items */
+  text-align: center; /* Set the alignment for the text */
+  border-radius: 10px; /* Set the border radius for the element */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Set the shadow for the element */
+  background-color: #3577ffa7; /* Set the background color for the element */
+  transition: transform 0.25s, box-shadow 0.25s; /* Set the transition for the element */
+  /* Use flexbox to center content inside the element */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
+  display: flex; /* Standard syntax for modern browsers (widely supported) */
+  flex-direction: column; /* Set the directtion for the items */
+  align-items: center !important; /* Center align items horizontally */
+}
+
+/* Hover Effect */
+#badge-grid .col:hover {
+  transform: translateY(-5px); /* Lift effect on hover */
+  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+}
+
+/* Responsive Styles */
 
 @media (max-width: 1280px) {
   #custom-cards,
   #badge-grid {
     padding: 5vh 25px 15vh !important; /* Set the padding for the element */
+  }
+}
+
+@media (min-width: 992px) {
+  .row-cols-lg-4 > * {
+    width: calc(25% - 20px);
+  }
+}
+
+@media (max-width: 600px) {
+  .card {
+    margin: 10px; /* Set the margin for the element */
   }
 }
 
@@ -267,22 +342,28 @@ footer {
   height: 5vh;
   min-height: 100px;
   padding: 20px 50px;
-  display: flex;
+  background-color: #3586ff;
+  color: #ffffff;
+  /* Use flexbox to center content inside the element */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
+  display: flex; /* Standard syntax for modern browsers (widely supported) */
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #3586ff;
-  color: #ffffff;
 }
 
 footer .social_icon,
 footer .menu {
   position: relative;
-  display: flex;
+  margin: 0;
+  padding-top: 10px;
+  /* Use flexbox to center content inside the element */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
+  display: flex; /* Standard syntax for modern browsers (widely supported) */
   justify-content: center;
   align-items: center;
-  padding-top: 10px;
-  margin: 0;
 }
 
 footer .social_icon li,
