@@ -1,0 +1,180 @@
+<%- include("../partials/header.ejs") %>
+
+<main class="no-padding caribbean">
+  <div class="hero">
+    <h1 class="title pb-2">Discover the Caribbean</h1>
+  </div>
+  <div class="container my-4">
+    <h2 class="mt-4">Welcome to the Caribbean</h2>
+    <p>
+      The Caribbean is a place of stunning beaches, vibrant marine life, and
+      rich cultural experiences. From the crystal-clear waters to the lush
+      landscapes, every corner of these islands offers something beautiful.
+    </p>
+
+    <div id="map" class="mb-5"></div>
+
+    <h2 class="text-center">Activities</h2>
+    <ul>
+      <li>Snorkeling and Scuba Diving</li>
+      <li>Island Hopping</li>
+      <li>Cultural Tours</li>
+      <li>Relaxing on the Beach</li>
+    </ul>
+    <h2 class="text-center">Why Choose Us?</h2>
+    <p>
+      At Ocean-Minded, we provide tailored experiences that connect you with the
+      beauty of the ocean world. Our expert guides ensure you have a wonderful
+      adventure.
+    </p>
+
+    <section id="testimonials" class="my-5">
+      <h2 class="text-center">What Our Travelers Say</h2>
+      <div
+        class="carousel slide"
+        id="testimonialCarousel"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="testimonial">
+              "Exploring the Caribbean with Ocean-Minded was a dream come true!
+              Thank you so much" -
+              <strong>Isabella R.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The snorkeling experience was beautiful! The guides were
+              incredibly knowledgeable about the marine life." -
+              <strong>Jamal P.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "Every moment spent in the Caribbean was wonderful! I can't wait
+              to return for another adventure with Ocean-Minded." -
+              <strong>Clara S.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The vibrant culture and stunning beaches made our trip wonderful.
+              Ocean-Minded truly knows how to create amazing experiences!" -
+              <strong>Lucas T.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "From the lush rainforests to the crystal-clear waters, every
+              detail was perfect. Thank you, Ocean-Minded!" -
+              <strong>Emma W.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The commitment to sustainability and local culture made our trip
+              meaningful and enjoyable. Highly recommend!" -
+              <strong>Oliver H.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "Ocean-Minded provided a great travel experience! The amazing
+              views and quality service made it all worthwhile." -
+              <strong>Sophia L.</strong>
+            </p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <a href="/contact" class="btn btn-primary btn-lg"
+      >Contact Us to Start Planning</a
+    >
+  </div>
+</main>
+
+<!-- MapLibre CSS and JS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css"
+/>
+<script
+  src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"
+  defer
+></script>
+
+<!-- Custom Map Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const map = new maplibregl.Map({
+      container: "map",
+      style: "https://demotiles.maplibre.org/style.json", // MapLibre style
+      center: [-70, 20], // Longitude, Latitude
+      zoom: 4,
+    });
+
+    const islands = [
+      {
+        name: "Bahamas",
+        coordinates: [-77.3963, 25.0343],
+        activities:
+          "explore the stunning beaches, go snorkeling in the blue waters, or explore the vibrant marine life at Andros Barrier Reef.",
+      },
+      {
+        name: "Cuba",
+        coordinates: [-77.7812, 21.5216],
+        activities:
+          "experience the vibrant culture in Havana, relax on Varadero Beach, or visit the historic town of Trinidad.",
+      },
+      {
+        name: "Jamaica",
+        coordinates: [-77.2975, 18.1096],
+        activities:
+          "visit the famous Dunn's River Falls, hike in the Blue Mountains, or explore the beautiful Seven Mile Beach.",
+      },
+      {
+        name: "St. Lucia",
+        coordinates: [-60.9789, 13.9094],
+        activities:
+          "visit the wonderful beaches of Anse Chastanet, take a boat tour to see the beautiful coastline, or explore the lush forests.",
+      },
+      {
+        name: "Barbados",
+        coordinates: [-59.5432, 13.1939],
+        activities:
+          "enjoy the nightlife in St. Lawrence Gap, visit the historic Bridgetown, or go surfing at Bathsheba.",
+      },
+    ];
+
+    islands.forEach((island) => {
+      new maplibregl.Marker()
+        .setLngLat(island.coordinates)
+        .setPopup(
+          new maplibregl.Popup().setText(`${island.name}: ${island.activities}`)
+        ) // Add popups with activities
+        .addTo(map);
+    });
+  });
+</script>
+
+<%- include("../partials/footer.ejs") %>
