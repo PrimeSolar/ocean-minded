@@ -17,6 +17,22 @@ body {
   color: #2a2a2a; /* Set the text color for the element */
 }
 
+body:has(.caribbean) {
+  background-image: url(../images/caribbean.jpg);
+}
+
+body:has(.pacific-northwest) {
+  background-image: url(../images/pacific-northwest.jpg);
+}
+
+body:has(.mediterranean) {
+  background-image: url(../images/mediterranean.jpg);
+}
+
+body:has(.hawaii) {
+  background-image: url(../images/hawaii.jpg);
+}
+
 i {
   margin-right: 10px;
 }
@@ -25,7 +41,7 @@ i.fa-bars {
   margin: 0;
 }
 
-/* The Bootstrap Navbar Style Rules*/
+/* The Navigation Bar Style Rules*/
 
 .navbar-logo {
   padding: 15px;
@@ -37,23 +53,7 @@ i.fa-bars {
 }
 
 .navbar-mainbg {
-  padding: 0px;
-  background-color: #007fff; /* Set the background color for the element */
-}
-
-#navbarSupportedContent {
-  position: relative;
-  overflow: hidden;
-}
-
-#navbarSupportedContent ul {
-  padding: 0;
-  margin: 0;
-}
-
-#navbarSupportedContent li {
-  list-style-type: none;
-  float: left;
+  background-color: #007fff; /* Set the background for the color of the element */
 }
 
 #navbarSupportedContent ul li a {
@@ -63,18 +63,12 @@ i.fa-bars {
   display: block;
   padding: 20px 20px;
   transition-duration: 0.6s;
-  transition-timing-function: cubic-bezier(0.68, -0.55, 0.265, 1.55);
+  transition-timing-function: cubic-bezier(0.68, -0.55, 0.26, 1.55);
   position: relative;
 }
 
-#navbarSupportedContent > ul > li.active > a {
-  color: #3586ff;
-  background-color: transparent;
-  transition: all 0.7s;
-}
-
-#navbarSupportedContent a:not(:only-child):after {
-  content: "\f105"; /* Font Awesome Badge */
+/* #navbarSupportedContent a:not(:only-child):after {
+  content: "\f105";
   display: inline-block;
   position: absolute;
   top: 10px;
@@ -85,7 +79,7 @@ i.fa-bars {
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
   transition: 0.5s;
-}
+} */
 
 #navbarSupportedContent .active > a:not(:only-child):after {
   transform: rotate(90deg);
@@ -93,6 +87,43 @@ i.fa-bars {
 
 #navbarSupportedContent ul li a i {
   margin-right: 10px;
+}
+
+.nav-item {
+  position: relative; /* Set the position for the element */
+}
+
+.nav-link {
+  color: #007bff; /* Set the color for the text of the element */
+  transition: color 0.3s; /* Set the transition for the element */
+}
+
+.nav-link:hover {
+  color: #0056b3; /* Set the color for the text of the element */
+}
+
+.dropdown-menu {
+  position: absolute !important;
+  padding: 10px 0; /* Set the padding for the element */
+  border-radius: 8px; /* Set the radius for the border of the element */
+  z-index: 1000; /* Set the stacking order for the element */
+  background-color: #ffffff; /* Set the color for the background of the element */
+  box-shadow: 0 4px 20px #0000001a; /* Set the shadow for the element */
+}
+
+.dropdown-item {
+  padding: 10px 20px; /* Set the padding for the element */
+  color: #2e3a45 !important; /* Set the color for the text of the element */
+  transition: none; /* Set the transition for the element */
+}
+
+.dropdown-item:hover {
+  color: #007bff !important; /* Set the color for the text of the element */
+}
+
+.dropdown-item:focus {
+  outline: none; /* Set the outline for the element */
+  background-color: #e9ecef; /* Set the color for the background element */
 }
 
 .hori-selector {
@@ -133,7 +164,7 @@ i.fa-bars {
   width: 50px;
   height: 50px;
   border-radius: 50%;
-  background-color: #3586ff;
+  background-color: #3570ff;
 }
 
 .hori-selector .right:before {
@@ -249,6 +280,89 @@ ul {
   padding: 0;
 }
 
+.container.my-4 ul {
+  padding: 35px 0 50px;
+}
+
+#testimonialCarousel {
+  margin: 4vh 0;
+  border-radius: 10px; /* Set the radius for the border of the element */
+  box-shadow: 0 4px 20px #0000001a; /* Set the shadow for the element */
+  overflow: hidden; /* Set the overflow for the element */
+  background-color: #f8f9fa; /* Set the background color for the element */
+}
+
+.carousel-inner {
+  padding: 20px; /* Set the padding for the element */
+}
+
+.testimonial {
+  border: none !important;
+  padding: 0 37px !important;
+  font-size: 1.2rem !important; /* Set the size for the font of the element */
+  text-align: center !important; /* Center the text for the element */
+  transition: none !important;
+}
+
+.testimonial:hover {
+  background-color: #f8f9fa !important; /* Set the color for the background of the element */
+}
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon {
+  background-color: #007bff; /* Set the color for the background of the element */
+  border-radius: 50%; /* Set the radius for the border of the element */
+}
+
+.carousel-control-prev,
+.carousel-control-next {
+  width: 5%; /* Set the width for the element */
+}
+
+.carousel-control-prev:hover,
+.carousel-control-next:hover {
+  background-color: #007bff1a !important; /* Set the color for the background of the element */
+}
+
+.carousel-item {
+  transition: transform 0.5s ease; /* Set the transition for the element */
+}
+
+.carousel-item.active {
+  opacity: 1; /* Set the opacity for the element */
+}
+
+#newsletter {
+  border-radius: 10px; /* Set the radius for the border of the element */
+  padding: 50px; /* Set the padding for the element */
+  box-shadow: 0 4px 20px #0000001a; /* Set the shadow for the element */
+}
+
+#newsletter h2 {
+  font-size: 2rem; /* Set the size for the font of the element */
+  color: #007bff; /* Set the color for the text of the element */
+}
+
+#newsletter p {
+  font-size: 1.1rem; /* Set the size for the font of the element */
+  margin-bottom: 20px; /* Set the size for the bottom margin of the element */
+}
+
+.form-control {
+  border-radius: 20px; /* Set the radius for the border of the element */
+  border: 1px solid #007bff; /* Set the border for the element */
+}
+
+.btn-primary {
+  padding: 10px 20px; /* Set the padding for the element */
+  border-radius: 20px; /* Set the radius for the border of the element */
+}
+
+.btn-primary:hover {
+  background-color: #0057b3; /* Set the color for the background of the element */
+  border-color: #0057b3; /* Set the color for the border of the element */
+}
+
 #custom-cards,
 #badge-grid {
   padding: 5vh 25px 17.37vh !important; /* Set the padding for the element */
@@ -261,20 +375,15 @@ ul {
 }
 
 #badge-grid {
-  background-color: rgba(
-    255,
-    255,
-    255,
-    0.8
-  ); /* Set the background color for the element */
-  border-radius: 12px; /* Set the border radius for the element */
-  padding: 40px; /* Set the padding for the element */
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.2); /* Set the shadow for the element */
+  padding: 50px; /* Set the padding for the element */
+  border-radius: 10px; /* Set the border radius for the element */
+  background-color: #ffffffcc; /* Set the background color for the element */
+  box-shadow: 0 8px 20px #00000037; /* Set the shadow for the element */
 }
 
 @media (max-width: 600px) {
   #badge-grid {
-    padding: 20px; /* Reduced padding on smaller screens */
+    padding: 20px; /* Set the padding for the element */
   }
 }
 
@@ -285,12 +394,12 @@ ul {
 }
 
 #badge-grid .col {
-  padding: 15px; /* Set the padding for the element */
   margin: 10px; /* Set the margin for the element */
+  padding: 15px; /* Set the padding for the element */
   align-items: center; /* Set the alignment for the items */
   text-align: center; /* Set the alignment for the text */
   border-radius: 10px; /* Set the border radius for the element */
-  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15); /* Set the shadow for the element */
+  box-shadow: 0 4px 10px #00000037; /* Set the shadow for the element */
   background-color: #3577ffa7; /* Set the background color for the element */
   transition: transform 0.25s, box-shadow 0.25s; /* Set the transition for the element */
   /* Use flexbox to center content inside the element */
@@ -304,7 +413,7 @@ ul {
 /* Hover Effect */
 #badge-grid .col:hover {
   transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 12px 30px rgba(0, 0, 0, 0.2); /* Enhanced shadow on hover */
+  box-shadow: 0 12px 30px #00000037; /* Enhanced shadow on hover */
 }
 
 /* Responsive Styles */
