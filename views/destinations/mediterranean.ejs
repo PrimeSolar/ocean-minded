@@ -1,0 +1,196 @@
+<%- include("../partials/header.ejs") %>
+
+<main class="no-padding mediterranean">
+  <div class="hero">
+    <h1 class="title pb-2">Embrace the Mediterranean Sea</h1>
+  </div>
+  <div class="container my-4">
+    <h2 class="mt-4">Welcome to the Mediterranean</h2>
+    <p>
+      The Mediterranean Sea is a treasure trove of history, culture, and
+      stunning coastlines. From ancient ruins to picturesque villages, every
+      visit is a journey through time.
+    </p>
+
+    <div id="map" class="mb-5"></div>
+
+    <h2 class="text-center">Activities</h2>
+    <ul>
+      <li>Exploring Ancient Ruins</li>
+      <li>Relaxing on Beautiful Beaches</li>
+      <li>Culinary Tours of Local Cuisine</li>
+      <li>Island Hopping Adventures</li>
+    </ul>
+    <h2 class="text-center">Why Choose Us?</h2>
+    <p>
+      At Ocean-Minded, we offer personalized experiences that connect you with
+      the rich culture and beauty of the Mediterranean. Our expert team ensures
+      you have a memorable and enriching adventure.
+    </p>
+
+    <section id="testimonials" class="my-5">
+      <h2 class="text-center">What Our Travelers Say</h2>
+      <div
+        class="carousel slide"
+        id="testimonialCarousel"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="testimonial">
+              "Exploring the Mediterranean with Ocean-Minded was a dream come
+              true! The beautiful coastlines and rich history made our trip
+              wonderful." -
+              <strong>Giulia M.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The culinary experiences were incredible! I loved tasting local
+              dishes and learning about the culture." -
+              <strong>Marco T.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "Every moment spent in the Mediterranean was wonderful! The
+              sunsets over the sea were amazing." -
+              <strong>Elena R.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The beautiful islands and vibrant markets made our trip
+              unforgettable. Ocean-Minded truly knows how to create amazing
+              experiences!" -
+              <strong>Lucas P.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The journey was a flawless harmony of history and natural beauty.
+              Thank you, Ocean-Minded!" -
+              <strong>Sofia L.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The commitment to sustainability and local culture made our trip
+              meaningful and enjoyable. Highly recommend!" -
+              <strong>Antonio H.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "Ocean-Minded offered an exceptional travel experience! The
+              beautiful views and supportive service made it all worthwhile." -
+              <strong>Chloe W.</strong>
+            </p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <a href="/contact" class="btn btn-primary btn-lg"
+      >Contact Us to Start Planning</a
+    >
+  </div>
+</main>
+
+<!-- MapLibre CSS and JS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css"
+/>
+<script
+  src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"
+  defer
+></script>
+
+<!-- Custom Map Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const map = new maplibregl.Map({
+      container: "map",
+      style: "https://demotiles.maplibre.org/style.json", // MapLibre style
+      center: [14, 38], // Longitude, Latitude for Mediterranean
+      zoom: 4,
+    });
+
+    const locations = [
+      {
+        name: "Dobrota, Montenegro",
+        coordinates: [18.768, 42.45417000],
+        activities:
+          "enjoy the beautiful waterfront promenade, visit the nearby town of Kotor, or relax at the local beaches.",
+      },
+      {
+        name: "Tivat, Montenegro",
+        coordinates: [18.718, 42.42348000],
+        activities:
+          " visit the nearby island of Our Lady of Mercy, explore the luxurious Porto Montenegro, or relax at the beaches.",
+      },
+      {
+        name: "Dubrovnik, Croatia",
+        coordinates: [18.11, 42.6507],
+        activities:
+          "walk the ancient city walls, explore the Old Town, or take a boat trip to the nearby islands.",
+      },
+      {
+        name: "Santorini, Greece",
+        coordinates: [25.43, 36.3932],
+        activities:
+          "explore the beautiful sunsets in Oia, relax on the unique beaches, or visit the ancient ruins of Akrotiri.",
+      },
+      {
+        name: "Amalfi Coast, Italy",
+        coordinates: [14.6026, 40.634],
+        activities:
+          "drive along the scenic coastal road, visit the beautiful town of Positano, or enjoy fresh food by the sea.",
+      },
+      {
+        name: "Malta",
+        coordinates: [14.3754, 35.9375],
+        activities:
+          "discover the historic sites of Valletta, relax on the beaches of Gozo, or explore the Blue Lagoon.",
+      },
+      {
+        name: "Barcelona, Spain",
+        coordinates: [2.1734, 41.3851],
+        activities:
+          "visit the famous Sagrada Familia, walk through Park Güell, or explore the vibrant La Rambla.",
+      },
+    ];
+
+    locations.forEach((location) => {
+      new maplibregl.Marker()
+        .setLngLat(location.coordinates)
+        .setPopup(
+          new maplibregl.Popup().setText(
+            `${location.name}: ${location.activities}`
+          )
+        ) // Add popups with activities
+        .addTo(map);
+    });
+  });
+</script>
+
+<%- include("../partials/footer.ejs") %>
