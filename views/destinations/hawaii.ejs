@@ -1,0 +1,190 @@
+<%- include("../partials/header.ejs") %>
+
+<main class="no-padding hawaii">
+  <div class="hero">
+    <h1 class="title pb-2">Embrace the Beauty of Hawaii</h1>
+  </div>
+  <div class="container my-4">
+    <h2 class="mt-4">Welcome to Hawaii</h2>
+    <p>
+      Hawaii is a place of wonderful landscapes, rich culture, and vibrant
+      marine life. From lush forests to pristine beaches, every visit is an
+      adventure.
+    </p>
+
+    <div id="map" class="mb-5"></div>
+
+    <h2 class="text-center">Activities</h2>
+    <ul>
+      <li>Snorkeling in Crystal Clear Waters</li>
+      <li>Hiking to Breathtaking Waterfalls</li>
+      <li>Exploring Volcanic National Parks</li>
+      <li>Experiencing Traditional Hawaiian Luau</li>
+    </ul>
+    <h2 class="text-center">Why Choose Us?</h2>
+    <p>
+      At Ocean-Minded, we offer personalized experiences that connect you with
+      the rich culture and beauty of Hawaii. Our expert team ensures you have a
+      memorable and enriching adventure.
+    </p>
+
+    <section id="testimonials" class="my-5">
+      <h2 class="text-center">What Our Travelers Say</h2>
+      <div
+        class="carousel slide"
+        id="testimonialCarousel"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="testimonial">
+              "Exploring Hawaii with Ocean-Minded was a dream come true! The
+              beautiful landscapes and rich culture made our trip wonderful." -
+              <strong>Giulia M.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The snorkeling experiences were incredible! I loved seeing the
+              vibrant marine life and learning about the culture." -
+              <strong>Marco T.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "Every moment spent in Hawaii was wonderful! The sunsets over the
+              ocean were amazing." -
+              <strong>Elena R.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The beautiful beaches and vibrant culture made our trip
+              unforgettable. Ocean-Minded truly knows how to create amazing
+              experiences!" -
+              <strong>Lucas P.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The journey was a flawless harmony of nature and culture. Thank
+              you, Ocean-Minded!" -
+              <strong>Sofia L.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The commitment to sustainability and local culture made our trip
+              meaningful and enjoyable. Highly recommend!" -
+              <strong>Antonio H.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "Ocean-Minded offered an exceptional travel experience! The
+              beautiful views and supportive service made it all worthwhile." -
+              <strong>Chloe W.</strong>
+            </p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <a href="/contact" class="btn btn-primary btn-lg"
+      >Contact Us to Start Planning</a
+    >
+  </div>
+</main>
+
+<!-- MapLibre CSS and JS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css"
+/>
+<script
+  src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"
+  defer
+></script>
+
+<!-- Custom Map Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const map = new maplibregl.Map({
+      container: "map",
+      style: "https://demotiles.maplibre.org/style.json", // MapLibre style
+      center: [-157, 20.8], // Longitude, Latitude for Hawaii
+      zoom: 6,
+    });
+
+    const locations = [
+      {
+        name: "Kauai",
+        coordinates: [-159.5732, 21.9661],
+        activities:
+          "relax on serene beaches, walk through lush botanical gardens, or swim in crystal-clear waters.",
+      },
+      {
+        name: "Honolulu, Oahu",
+        coordinates: [-157.8583, 21.3069],
+        activities:
+          "enjoy the popular Waikiki Beach, visit the Honolulu Museum of Art, or hike to Diamond Head for beautiful views.",
+      },
+      {
+        name: "Molokai",
+        coordinates: [-157.0583, 21.1445],
+        activities:
+          "experience the untouched beauty of Kalaupapa National Historical Park, hike to the highest sea cliffs, or enjoy local culture.",
+      },
+      {
+        name: "Lanai",
+        coordinates: [-156.9223, 20.8032],
+        activities:
+          "explore the luxury resorts, enjoy wonderful landscapes, or relax on secluded beaches.",
+      },
+      {
+        name: "Maui",
+        coordinates: [-156.3319, 20.7984],
+        activities:
+          "drive the scenic Road to Hana, relax on Kaanapali Beach, or visit the Lavender Farm.",
+      },
+
+      {
+        name: "Big Island, Hawaii",
+        coordinates: [-155.6659, 19.8968],
+        activities:
+          "take a helicopter tour, relax on sand beaches, or explore the lush forests.",
+      },
+    ];
+
+    locations.forEach((location) => {
+      new maplibregl.Marker()
+        .setLngLat(location.coordinates)
+        .setPopup(
+          new maplibregl.Popup().setText(
+            `${location.name}: ${location.activities}`
+          )
+        ) // Add popups with activities
+        .addTo(map);
+    });
+  });
+</script>
+
+<%- include("../partials/footer.ejs") %>
