@@ -1,46 +1,336 @@
 <%- include("partials/header.ejs") %>
 
 <main class="container">
-  <div>
+  <div class="text-center">
     <h1 class="title">Ocean-Minded</h1>
-    <img class="logo" src="images/logo.jpg" alt="The Ocean-Minded Logo Image" />
-    <p>
-      We create travel experiences that connect you with the beauty of the ocean
-      world.
+    <h2 class="pt-0 pb-5">Your Way to Beautiful Journeys</h2>
+    <img
+      class="logo img-fluid"
+      src="images/logo.jpg"
+      alt="The Ocean-Minded Logo Image"
+    />
+    <p class="lead">
+      We create wonderful travel experiences that connect you with the amazing
+      beauty of the ocean world. Let us guide you on a journey where adventure
+      meets happiness.
     </p>
-    <h2>Explore Our Destinations</h2>
+    <div class="d-flex flex-wrap justify-content-center">
+      <a href="#destinations" class="btn btn-primary btn-lg m-2"
+        >Explore Our Destinations</a
+      >
+      <a href="#experiences" class="btn btn-primary btn-lg m-2"
+        >Tailored Experiences</a
+      >
+      <a href="#sustainability" class="btn btn-primary btn-lg m-2"
+        >Sustainable Travel</a
+      >
+      <a href="#join" class="btn btn-primary btn-lg m-2"
+        >Join Us on an Adventure</a
+      >
+      <a href="#testimonials" class="btn btn-primary btn-lg m-2"
+        >What Our Travelers Say</a
+      >
+      <a href="#newsletter" class="btn btn-primary btn-lg m-2">Stay Updated</a>
+    </div>
+  </div>
+
+  <section id="destinations" class="my-5">
+    <h2 class="text-center">Explore Our Destinations</h2>
     <p>
-      From the pristine beaches of the Caribbean to the rugged coastlines of the
-      Pacific Northwest, our carefully curated destinations offer something for
-      every traveler. Dive into vibrant coral reefs, sail through crystal-clear
-      waters, or simply unwind on a sun-kissed shore. Each location is chosen
-      for its unique charm and the incredible experiences it offers.
+      From the pristine beaches of the Caribbean and the stunning coastlines of
+      the Pacific Northwest to the picturesque shores of the Mediterranean, our
+      carefully curated destinations promise something beautiful for every
+      traveler. Dive into vibrant coral reefs, sail through crystal-clear
+      waters, or simply unwind on sun-kissed shores. Each location is selected
+      for its unique allure and the incredible experiences it offers.
     </p>
-    <h2>Tailored Experiences</h2>
+    <div class="row justify-content-center">
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card">
+          <img
+            src="images/caribbean.jpg"
+            class="card-img-top img-fluid"
+            alt="Caribbean Beach"
+          />
+          <div class="card-body">
+            <h5 class="card-title">🌴 Caribbean Beauty</h5>
+            <p class="card-text">
+              Experience the stunning beaches and vibrant marine life of the
+              Caribbean, where the sky looks like a canvas of brilliant colors.
+            </p>
+            <a href="/destinations/caribbean" class="btn btn-primary"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card">
+          <img
+            src="images/pacific-northwest.jpg"
+            class="card-img-top img-fluid"
+            alt="Pacific Northwest Coast"
+          />
+          <div class="card-body">
+            <h5 class="card-title">🏞️ Pacific Northwest</h5>
+            <p class="card-text">
+              Explore the lush landscapes of the Pacific Northwest, where
+              mountains meet the sea in a wonderful embrace.
+            </p>
+            <a href="/destinations/pacific-northwest" class="btn btn-primary"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card">
+          <img
+            src="images/mediterranean.jpg"
+            class="card-img-top img-fluid"
+            alt="Mediterranean Sea"
+          />
+          <div class="card-body">
+            <h5 class="card-title">🌊 Mediterranean Bliss</h5>
+            <p class="card-text">
+              Sail through the crystal-clear waters and discover the culture of
+              the Mediterranean, where history and beauty meet.
+            </p>
+            <a href="/destinations/mediterranean" class="btn btn-primary"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+      <div class="col-12 col-sm-6 col-md-4 mb-4">
+        <div class="card">
+          <img
+            src="images/hawaii.jpg"
+            class="card-img-top img-fluid"
+            alt="Hawaii Waters"
+          />
+          <div class="card-body">
+            <h5 class="card-title">☀️ Wonderful Hawaii</h5>
+            <p class="card-text">
+              Visit a place of wonderful landscapes, lush forests, pristine
+              beaches, vibrant marine life, and rich culture.
+            </p>
+            <a href="/destinations/hawaii" class="btn btn-primary"
+              >Learn More</a
+            >
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section id="experiences" class="my-5">
+    <h2 class="text-center">Tailored Experiences</h2>
     <p>
-      At Ocean-Minded, we understand that every traveler is unique. That's why
-      we offer personalized itineraries designed to match your interests and
-      preferences. Whether you're an avid sailor, a snorkeling enthusiast, or
-      someone looking to escape the hustle and bustle of everyday life, our team
-      of experts is here to craft the perfect ocean adventure just for you.
+      At Ocean-Minded, we believe that every traveler is unique. That's why we
+      offer personalized itineraries designed to match your interests and
+      preferences. Whether you're an adventurous sailor, a snorkeling
+      enthusiast, or someone looking for a peaceful relaxation, our team of
+      experts is here to craft the perfect ocean adventure just for you.
     </p>
-    <h2>Sustainable Travel</h2>
+    <ul class="list-group">
+      <li class="list-group-item">🌊 Custom Sailing Trips</li>
+      <li class="list-group-item">🐠 Snorkeling and Diving Adventures</li>
+      <li class="list-group-item">🏖️ Relaxing Ocean Beaches</li>
+      <li class="list-group-item">🌅 Eco-Tours and Wildlife Watching</li>
+    </ul>
+  </section>
+
+  <section id="sustainability" class="my-5">
+    <h2 class="text-center">Sustainable Travel</h2>
     <p>
-      We are committed to protecting the oceans we love. Our sustainable travel
-      practices ensure that your adventures have a positive impact on the
-      environment and local communities. By choosing Ocean-Minded, you’re not
-      just exploring the beauty of the sea; you’re also helping to preserve it
-      for future generations.
+      We are deeply committed to protecting the oceans we cherish. Our
+      sustainable travel practices ensure that your adventure make a beneficial
+      impact on the environment and local communities. By choosing Ocean-Minded,
+      you’re not just exploring the beauty of the sea; you’re also helping to
+      preserve it for future generations.
     </p>
+    <p>
+      Join us in our mission to promote responsible tourism and support local
+      conservation efforts. Together, we can make a meaningful difference in
+      preserving our planet's precious resources!
+    </p>
+  </section>
+
+  <section id="join" class="my-5 text-center">
     <h2>Join Us on an Adventure</h2>
     <p>
-      Are you ready to embark on a journey that will inspire and rejuvenate you?
-      Explore our website to discover our exciting travel packages, read
-      testimonials from fellow ocean lovers, and learn more about our commitment
-      to sustainability. Let Ocean-Minded be your guide to the wonders of the
-      sea. Dive in and start your adventure today!
+      Are you ready to embark on a journey that will inspire you? Explore our
+      website to discover our wonderful travel packages, read kind words from
+      fellow ocean lovers, and learn more about our unwavering commitment to
+      sustainability. Let Ocean-Minded be your guide to the wonders of the sea5!
     </p>
-  </div>
+    <a href="/contact" class="btn btn-primary btn-lg"
+      >Contact Us to Start Planning</a
+    >
+  </section>
+
+  <section id="testimonials" class="my-5">
+    <h2 class="text-center">What Our Travelers Say</h2>
+    <div
+      class="carousel slide"
+      id="testimonialCarousel"
+      data-bs-ride="carousel"
+    >
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <p class="testimonial">
+            "Ocean-Minded provided the best travel experience of my life! The
+            personalized itinerary was perfect for my family." -
+            <strong>Sarah L.</strong>
+          </p>
+        </div>
+        <div class="carousel-item">
+          <p class="testimonial">
+            "I loved every moment of my trip! The team was knowledgeable and
+            passionate about sustainability." - <strong>Mark T.</strong>
+          </p>
+        </div>
+        <div class="carousel-item">
+          <p class="testimonial">
+            "A truly beautiful adventure! I can't wait to book my next trip with
+            Ocean-Minded." - <strong>Emily R.</strong>
+          </p>
+        </div>
+        <div class="carousel-item">
+          <p class="testimonial">
+            "The guides were fantastic, and the scenery was breathtaking. I
+            highly recommend Ocean-Minded!" - <strong>David M.</strong>
+          </p>
+        </div>
+        <div class="carousel-item">
+          <p class="testimonial">
+            "Every detail was taken care of, making our trip stress-free and
+            enjoyable." - <strong>Jessica T.</strong>
+          </p>
+        </div>
+        <div class="carousel-item">
+          <p class="testimonial">
+            "I was amazed by the level of service and the beauty of the
+            locations we visited." - <strong>Michael B.</strong>
+          </p>
+        </div>
+        <div class="carousel-item">
+          <p class="testimonial">
+            "Attention to detail and commitment to sustainability made our trip
+            enjoyable and meaningful." - <strong>Laura K.</strong>
+          </p>
+        </div>
+      </div>
+      <button
+        class="carousel-control-prev"
+        type="button"
+        data-bs-target="#testimonialCarousel"
+        data-bs-slide="prev"
+      >
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button
+        class="carousel-control-next"
+        type="button"
+        data-bs-target="#testimonialCarousel"
+        data-bs-slide="next"
+      >
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </section>
+
+  <section id="newsletter" class="my-5 text-center">
+    <h2>Stay Updated</h2>
+    <p>
+      Subscribe to our newsletter for the latest travel tips, exclusive offers,
+      and ocean conservation news. Join our community of ocean lovers and be the
+      first to know about our exciting adventures!
+    </p>
+    <form
+      id="subscribeForm"
+      action="/subscribe"
+      method="POST"
+      class="form-inline justify-content-center"
+    >
+      <input
+        type="email"
+        id="emailInput"
+        class="form-control mb-2 mr-sm-2"
+        placeholder="Enter your email"
+        required
+      />
+      <button type="submit" class="btn btn-primary mb-2">Subscribe</button>
+    </form>
+    <div id="responseMessage" class="mt-3"></div>
+  </section>
 </main>
+
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const cards = document.querySelectorAll(".card");
+    const row = document.querySelector(".row");
+
+    if (cards.length % 2 === 0) {
+      row.classList.add("even-cards");
+    } else {
+      row.classList.add("odd-cards");
+    }
+  });
+
+  document
+    .getElementById("subscribeForm")
+    .addEventListener("submit", function (event) {
+      event.preventDefault();
+
+      const email = document.getElementById("emailInput").value;
+
+      // Email validation
+      if (!validateEmail(email)) {
+        displayMessage("Please enter a valid email address.", "danger");
+        return;
+      }
+
+      fetch("/subscribe", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({ email: email }),
+      })
+        .then((response) => {
+          if (response.ok) {
+            displayMessage(
+              "Thank you for subscribing! Welcome to the Ocean-Minded family!",
+              "success"
+            );
+            document.getElementById("subscribeForm").reset();
+          } else {
+            displayMessage("Subscription failed. Please try again.", "danger");
+          }
+        })
+        .catch((error) => {
+          displayMessage(
+            "An error occurred. Please try again later.",
+            "danger"
+          );
+        });
+    });
+
+  function validateEmail(email) {
+    const re = /^[^\s@]+@[^\s@]+\.[^\s@]+$/; // Email regex
+    return re.test(String(email).toLowerCase());
+  }
+
+  function displayMessage(message, type) {
+    const responseMessage = document.getElementById("responseMessage");
+    responseMessage.textContent = message;
+    responseMessage.className =
+      type === "success" ? "text-success" : "text-danger";
+  }
+</script>
 
 <%- include("partials/footer.ejs") %>
