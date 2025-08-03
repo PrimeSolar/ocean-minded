@@ -1,0 +1,30 @@
+{
+    "name": "Ocean-Minded",
+    "short_name": "Ocean-Minded",
+    "start_url": "/",
+    "display": "standalone",
+    "background_color": "#007fff",
+    "theme_color": "#007fff",
+    "icons": [
+        {
+            "src": "/images/logo-817x817.jpg",
+            "sizes": "817x817",
+            "type": "image/jpg"
+        },
+        {
+            "src": "/images/logo-512x512.jpg",
+            "sizes": "512x512",
+            "type": "image/jpg"
+        },
+        {
+            "src": "/images/logo-370x370.jpg",
+            "sizes": "370x370",
+            "type": "image/jpg"
+        },
+        {
+            "src": "/images/logo-192x192.jpg",
+            "sizes": "192x192",
+            "type": "image/jpg"
+        }
+    ]
+}
