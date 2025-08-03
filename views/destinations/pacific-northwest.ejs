@@ -1,0 +1,184 @@
+<%- include("../partials/header.ejs") %>
+
+<main class="no-padding pacific-northwest">
+  <div class="hero">
+    <h1 class="title pb-2">Explore the Pacific Northwest</h1>
+  </div>
+  <div class="container my-4">
+    <h2 class="mt-4">Welcome to the Pacific Northwest</h2>
+    <p>
+      The Pacific Northwest is known for its beautiful landscapes, lush forests,
+      and vibrant coastal communities. From the majestic mountains to the serene
+      beaches, this region offers amazing adventures.
+    </p>
+
+    <div id="map" class="mb-5"></div>
+
+    <h2 class="text-center">Activities</h2>
+    <ul>
+      <li>Hiking in National Parks</li>
+      <li>Whale Watching</li>
+      <li>Wine Tasting Tours</li>
+      <li>Exploring Coastal Towns</li>
+    </ul>
+    <h2 class="text-center">Why Choose Us?</h2>
+    <p>
+      At Ocean-Minded, we curate unique experiences that immerse you in the
+      natural beauty of the Pacific Northwest, allowing you to discover
+      wonderful moments.
+    </p>
+
+    <section id="testimonials" class="my-5">
+      <h2 class="text-center">What Our Travelers Say</h2>
+      <div
+        class="carousel slide"
+        id="testimonialCarousel"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <p class="testimonial">
+              "Exploring the Pacific Northwest with Ocean-Minded was a beautiful
+              experience! The wonderful landscapes and personalized itinerary
+              made it perfect." -
+              <strong>Emily J.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The hiking trails through the lush forests were incredible! Our
+              guides were knowledgeable and passionate about the region." -
+              <strong>Michael T.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "Every moment spent in the Pacific Northwest was amazing! I can't
+              wait to return for another adventure with Ocean-Minded." -
+              <strong>Sarah K.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The stunning coastline and vibrant forests made our trip
+              unforgettable. Ocean-Minded truly knows how to create amazing
+              experiences!" -
+              <strong>David L.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "From the majestic mountains to the serene lakes, every detail was
+              perfect. Thank you, Ocean-Minded!" -
+              <strong>Olivia R.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "The commitment to sustainability and local culture made our trip
+              meaningful and enjoyable. Highly recommend!" -
+              <strong>James H.</strong>
+            </p>
+          </div>
+          <div class="carousel-item">
+            <p class="testimonial">
+              "Ocean-Minded provided an exceptional travel experience! The
+              beautiful views and quality service made it all worthwhile." -
+              <strong>Isabella W.</strong>
+            </p>
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#testimonialCarousel"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </section>
+
+    <a href="/contact" class="btn btn-primary btn-lg"
+      >Contact Us to Start Planning</a
+    >
+  </div>
+</main>
+
+<!-- MapLibre CSS and JS -->
+<link
+  rel="stylesheet"
+  href="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.css"
+/>
+<script
+  src="https://unpkg.com/maplibre-gl@latest/dist/maplibre-gl.js"
+  defer
+></script>
+
+<!-- Custom Map Script -->
+<script>
+  document.addEventListener("DOMContentLoaded", function () {
+    const map = new maplibregl.Map({
+      container: "map",
+      style: "https://demotiles.maplibre.org/style.json", // MapLibre style
+      center: [-124, 48], // Longitude, Latitude for Pacific Northwest
+      zoom: 5,
+    });
+
+    const locations = [
+      {
+        name: "Vancouver, BC",
+        coordinates: [-123.1216, 49.2827],
+        activities:
+          "walk through Stanley Park, visit Granville Island, or explore the Capilano Suspension Bridge.",
+      },
+      {
+        name: "Olympic National Park, WA",
+        coordinates: [-123.6044, 47.8021],
+        activities:
+          "hike through lush rainforests, explore the rugged coastline, or visit Hurricane Ridge for stunning views.",
+      },
+      {
+        name: "Seattle, WA",
+        coordinates: [-122.3321, 47.6062],
+        activities:
+          "visit the Space Needle, explore Pike Place Market, or take a ferry to Bainbridge Island.",
+      },
+      {
+        name: "Mount Rainier National Park, WA",
+        coordinates: [-121.7603, 46.8523],
+        activities:
+          "hike the scenic trails, enjoy wildflower meadows, or enjoy the views of Mount Rainier.",
+      },
+      {
+        name: "Portland, OR",
+        coordinates: [-122.6765, 45.5231],
+        activities:
+          "enjoy the food trucks, explore the Portland Japanese Garden, or visit the Columbia River Gorge.",
+      },
+    ];
+
+    locations.forEach((location) => {
+      new maplibregl.Marker()
+        .setLngLat(location.coordinates)
+        .setPopup(
+          new maplibregl.Popup().setText(
+            `${location.name}: ${location.activities}`
+          )
+        ) // Add popups with activities
+        .addTo(map);
+    });
+  });
+</script>
+
+<%- include("../partials/footer.ejs") %>
