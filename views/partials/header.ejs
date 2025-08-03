@@ -1,67 +1,139 @@
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="en" dir="ltr" manifest="manifest.appcache">
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Ocean-Minded is designed for a travel company that specializes in creating wonderful experiences that connect clients with the beauty of the ocean world."
+    />
+    <meta
+      name="keywords"
+      content="ocean, sea, environment, travel, travel company, romantic travel, adventures, sustainable, sustainable practices, sustainability"
+    />
+    <meta name="author" content="Vladislav Kazantsev" />
+    <meta name="theme-color" content="#007fff" />
+
+    <!-- Open Graph Meta Tags for Social Media -->
+    <meta property="og:title" content="Ocean-Minded" />
+    <meta
+      property="og:description"
+      content="Ocean-Minded is designed for a travel company that specializes in creating wonderful experiences that connect clients with the beauty of the ocean world."
+    />
+    <meta property="og:image" content="/images/logo-512x512.jpg" />
+    <meta property="og:url" content="https://ocean-minded.onrender.com/" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card Meta Tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Ocean-Minded" />
+    <meta
+      name="twitter:description"
+      content="Ocean-Minded is designed for a travel company that specializes in creating wonderful experiences that connect clients with the beauty of the ocean world."
+    />
+    <meta name="twitter:image" content="/images/logo-512x512.jpg" />
+
     <!-- Bootstrap CSS -->
     <link
       rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+      type="text/css"
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.7/dist/css/bootstrap.min.css"
       crossorigin="anonymous"
     />
-    <link rel="stylesheet" href="/styles/layout.css" />
-    <link rel="stylesheet" href="/styles/content.css" />
-    <link rel="icon" href="/images/logo.jpg" />
+
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="/styles/layout-min.css" />
+    <link rel="stylesheet" type="text/css" href="/styles/content-min.css" />
+
+    <!-- Web App Manifest -->
+    <link rel="manifest" href="manifest.json" />
+
+    <link rel="icon" href="/images/logo-192x192.jpg" />
     <title>Ocean-Minded</title>
   </head>
-  <header>
-    <nav class="navbar navbar-expand-custom navbar-mainbg">
-      <a class="navbar-brand navbar-logo" href="/"
-        ><i class="fa-solid fa-water"></i>Ocean-Minded</a
-      >
-      <button
-        class="navbar-toggler"
-        type="button"
-        data-toggle="collapse"
-        data-target="#navbarSupportedContent"
-        aria-controls="navbarSupportedContent"
-        aria-expanded="false"
-        aria-label="Toggle Navigation"
-      >
-        <i class="fas fa-bars text-white"></i>
-      </button>
-      <div class="collapse navbar-collapse" id="navbarSupportedContent">
-        <ul class="navbar-nav ml-auto">
-          <div class="hori-selector">
-            <div class="left"></div>
-          </div>
-          <li class="nav-item">
-            <a class="nav-link" href="/"
-              ><i class="fa-solid fa-house"></i>Home</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/about"
-              ><i class="fa-solid fa-ship"></i>About</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/services"
-              ><i class="fa-solid fa-briefcase"></i>Services</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/team"
-              ><i class="fa-solid fa-users"></i>Team</a
-            >
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="/contact"
-              ><i class="fa-regular fa-message"></i>Contact</a
-            >
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-</html>
+  <body>
+    <header>
+      <nav class="navbar navbar-expand-custom navbar-mainbg">
+        <a class="navbar-brand navbar-logo" href="/"
+          ><i class="fa-solid fa-water"></i>Ocean-Minded</a
+        ><button
+          class="navbar-toggler"
+          type="button"
+          data-bs-toggle="collapse"
+          data-bs-target="#navbarSupportedContent"
+          aria-controls="navbarSupportedContent"
+          aria-expanded="false"
+          aria-label="Toggle Navigation"
+        >
+          <i class="fas fa-bars text-white"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ml-auto">
+            <div class="hori-selector">
+              <div class="left"></div>
+            </div>
+            <li class="nav-item">
+              <a class="nav-link" href="/"
+                ><i class="fa-solid fa-house"></i>Home</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/about"
+                ><i class="fa-solid fa-ship"></i>About</a
+              >
+            </li>
+            <li class="nav-item dropdown">
+              <a
+                class="nav-link dropdown-toggle"
+                href="#"
+                role="button"
+                data-bs-toggle="dropdown"
+                aria-expanded="false"
+              >
+                Destinations
+              </a>
+              <ul class="dropdown-menu">
+                <li>
+                  <a class="dropdown-item" href="/destinations/caribbean"
+                    >Discover the Caribbean</a
+                  >
+                </li>
+                <li>
+                  <a
+                    class="dropdown-item"
+                    href="/destinations/pacific-northwest"
+                    >Explore the Pacific Northwest</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/destinations/mediterranean"
+                    >Embrace the Mediterranean Sea</a
+                  >
+                </li>
+                <li>
+                  <a class="dropdown-item" href="/destinations/hawaii"
+                    >Enjoy the Hawaii</a
+                  >
+                </li>
+              </ul>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/services"
+                ><i class="fa-solid fa-briefcase"></i>Services</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/team"
+                ><i class="fa-solid fa-users"></i>Team</a
+              >
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="/contact"
+                ><i class="fa-regular fa-message"></i>Contact</a
+              >
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+  </body>
