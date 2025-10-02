@@ -19,7 +19,7 @@ footer {
 
 main {
   flex: 1 0 auto;
-  padding: 5vmin;
+  padding: 5vmin; /* Set the padding of the element */
   text-align: center;
 }
 
