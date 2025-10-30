@@ -1,6 +1,21 @@
+/*
+ * Style Sheet
+ *
+ * Copyright © Vladislav Kazantsev
+ * All rights reserved.
+ * This code is the intellectual property of Vladislav Kazantsev.
+ * You are welcome to clone the related repository and use the code for exploratory purposes.
+ * However, unauthorized reproduction, modification, or redistribution of this code (including cloning of related repository or altering it for activities beyond exploratory use) is strictly prohibited.
+ * Code snippets may be shared only when the original author is explicitly credited and a direct link to the original source of the code is provided alongside the code snippet.
+ * Sharing the link to the file is permitted, except when directed toward retrieval purposes.
+ * Any form of interaction with this file is strictly prohibited when facilitated by the code, except when such interaction is for discussion or exchange purposes with others.
+ * This copyright notice applies globally.
+ * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
+ */
+
 html,
 body {
-  height: 100%;
+  height: 100%; /* Set the height for the element */
 }
 
 body {
@@ -15,6 +30,38 @@ body {
 header,
 footer {
   flex: 0 0 auto;
+}
+
+.bmc-button {
+  display: block; /* Specify the display behavior of the element */
+  width: fit-content; /* Set the width of the element */
+  height: 3rem; /* Set the height of the element */
+  margin: 0 auto 25px; /* Set the size for the margin of the element */
+  background-color: #ff843f !important; /* Set the color for the background of the element */
+  color: #ffffff; /* Set the color for the text of the element */
+  font-family: "Cookie", cursive; /* Set the font family for the text of the element */
+  font-weight: bold; /* Set the font weight for the text of the element */
+  text-decoration: none; /* Set the decoration for the text of the element */
+  text-shadow: 1px 1px 2px #00000080; /* Set the shadow for the text of the element */
+  border: none;
+  padding: 10px 20px; /* Set the padding of the element */
+  cursor: pointer; /* Specify the type of cursor to be displayed when hovering over the element */
+  outline: none;
+  box-shadow: 0 4px 8px #00000037; /* Set the shadow of the element */
+  /* Set the border radius for the corners of the element */
+  -webkit-border-radius: 5px; /* For older versions of Chrome and Safari */
+  -moz-border-radius: 5px; /* For older versions of Firefox */
+  -o-border-radius: 5px; /* For older versions of Opera */
+  border-radius: 5px; /* Standard property for border radius */
+  /* Add a transition effect for changes in properties */
+  -webkit-transition: 0.5s; /* For older versions of Chrome and Safari */
+  -o-transition: 0.5s; /* For older versions of Opera */
+  transition: 0.5s; /* Standard syntax for modern browsers (widely supported) */
+}
+
+.bmc-button:active {
+  transform: scale(0.95);
+  box-shadow: 0 4px 8px #0000004d;
 }
 
 main {
@@ -265,6 +312,7 @@ to-top {
   -webkit-transition: 0.25s; /* For older versions of Chrome and Safari */
   -o-transition: 0.25s; /* For older versions of Opera */
   transition: 0.25s; /* Standard syntax for modern browsers (widely supported) */
+
   /* Use flexbox to center content inside the element */
   display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
   display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
@@ -284,20 +332,20 @@ to-top {
 }
 
 to-top.active {
-  bottom: calc(5vh + 175px);
+  bottom: calc(15vh + 175px);
   pointer-events: auto;
   opacity: 1;
 }
 
 @media (max-width: 500px) {
   to-top.active {
-    bottom: calc(5vh + 159px);
+    bottom: calc(5vh + 250px);
   }
 }
 
 @media (max-height: 500px) {
   to-top.active {
-    bottom: calc(5vh + 190px);
+    bottom: calc(5vh + 210px);
   }
 }
 
@@ -361,4 +409,13 @@ textarea {
 
 [type="submit"]:hover {
   background: #3587ff;
+}
+
+@media print {
+  .title {
+    color: #373737;
+    background: none;
+    background-clip: unset;
+    -webkit-text-fill-color: unset;
+  }
 }
