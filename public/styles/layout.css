@@ -95,7 +95,7 @@ i.fa-bars {
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
   transition: 0.5s;
-}. */
+} */
 
 #navbarSupportedContent .active > a:not(:only-child):after {
   transform: rotate(90deg);
