@@ -13,7 +13,7 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
- @import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100&display=swap");
 
 * {
   margin: 0;
@@ -23,13 +23,13 @@
 }
 
 body {
-  line-height: 1.6; /* Set the line height for the element */
+  line-height: 1.6; /* Set the line height for the element. */
   background-image: url(../images/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
   background-size: 100vw 100vh;
   background-attachment: fixed;
-  color: #2a2a2a; /* Set the text color for the element */
+  color: #2a2a2a; /* Set the text color for the element. */
 }
 
 body:has(.caribbean) {
@@ -95,7 +95,7 @@ i.fa-bars {
   font-weight: 900;
   font-family: "Font Awesome 5 Free";
   transition: 0.5s;
-} */
+}. */
 
 #navbarSupportedContent .active > a:not(:only-child):after {
   transform: rotate(90deg);
@@ -106,40 +106,40 @@ i.fa-bars {
 }
 
 .nav-item {
-  position: relative; /* Set the position for the element */
+  position: relative; /* Set the position for the element. */
 }
 
 .nav-link {
-  color: #007bff; /* Set the color for the text of the element */
-  transition: color 0.3s; /* Set the transition for the element */
+  color: #007bff; /* Set the color for the text of the element. */
+  transition: color 0.3s; /* Set the transition for the element. */
 }
 
 .nav-link:hover {
-  color: #0056b3; /* Set the color for the text of the element */
+  color: #0056b3; /* Set the color for the text of the element. */
 }
 
 .dropdown-menu {
   position: absolute !important;
-  padding: 10px 0; /* Set the padding for the element */
-  border-radius: 8px; /* Set the radius for the border of the element */
-  z-index: 1000; /* Set the stacking order for the element */
-  background-color: #ffffff; /* Set the color for the background of the element */
-  box-shadow: 0 4px 20px #0000001a; /* Set the shadow for the element */
+  padding: 10px 0; /* Set the padding for the element. */
+  border-radius: 8px; /* Set the radius for the border of the element. */
+  z-index: 1000; /* Set the stacking order for the element. */
+  background-color: #ffffff; /* Set the color for the background of the element. */
+  box-shadow: 0 4px 20px #0000001a; /* Set the shadow for the element. */
 }
 
 .dropdown-item {
-  padding: 10px 20px; /* Set the padding for the element */
-  color: #2e3a45 !important; /* Set the color for the text of the element */
-  transition: none; /* Set the transition for the element */
+  padding: 10px 20px; /* Set the padding for the element. */
+  color: #2e3a45 !important; /* Set the color for the text of the element. */
+  transition: none; /* Set the transition for the element. */
 }
 
 .dropdown-item:hover {
-  color: #007bff !important; /* Set the color for the text of the element */
+  color: #007bff !important; /* Set the color for the text of the element. */
 }
 
 .dropdown-item:focus {
-  outline: none; /* Set the outline for the element */
-  background-color: #e9ecef; /* Set the color for the background element */
+  outline: none; /* Set the outline for the element. */
+  background-color: #e9ecef; /* Set the color for the background element. */
 }
 
 .hori-selector {
@@ -211,10 +211,10 @@ i.fa-bars {
   }
 
   .navbar-expand-custom .navbar-collapse {
-    /* Use flexbox to center content inside the element */
-    display: -ms-flexbox !important; /* For Internet Explorer 10 (supports an earlier flexbox model */
-    display: -webkit-box !important; /* For earlier versions of Chrome and Safari (pre-flexbox) */
-    display: flex !important; /* Standard syntax for modern browsers (widely supported) */
+    /* Use flexbox to center content inside the element. */
+    display: -ms-flexbox !important; /* For Internet Explorer 10 (supports an earlier flexbox model. */
+    display: -webkit-box !important; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+    display: flex !important; /* Standard syntax for modern browsers (widely supported). */
     flex-direction: row-reverse;
     flex-basis: auto;
     -ms-flex-preferred-size: auto;
@@ -259,36 +259,36 @@ i.fa-bars {
   }
 }
 
-/* The Container Style Rules */
+/* The Container Style Rules. */
 
 .container {
-  margin: 5vh auto 0; /* Set the margin for the element */
-  padding: 0 20px 10vh; /* Set the padding for the element */
-  max-width: 800px; /* Set the maximum width for the element */
+  margin: 5vh auto 0; /* Set the margin for the element. */
+  padding: 0 20px 10vh; /* Set the padding for the element. */
+  max-width: 800px; /* Set the maximum width for the element. */
   align-items: center;
-  background-color: #ffffff; /* Set the background color for the element */
-  border-radius: 8px; /* Set the border radius for the element */
-  box-shadow: 0 4px 10px #0000001a; /* Set the shadow for the element */
-  /* Use flexbox to center content inside the element */
-  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
-  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
-  display: flex; /* Standard syntax for modern browsers (widely supported) */
+  background-color: #ffffff; /* Set the background color for the element. */
+  border-radius: 8px; /* Set the border radius for the element. */
+  box-shadow: 0 4px 10px #0000001a; /* Set the shadow for the element. */
+  /* Use flexbox to center content inside the element. */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
   flex-direction: column;
   justify-content: center;
 }
 
-/* The Container Responsive Style Rules */
+/* The Container Responsive Style Rules. */
 
 @media (max-width: 1280px) {
   .container {
-    padding: 0 20px 20vh; /* Set the padding for the element */
+    padding: 0 20px 20vh; /* Set the padding for the element. */
   }
 }
 
 @media (max-width: 600px) {
   .container {
-    margin: 0 auto; /* Set the margin for the element */
-    padding: 15px; /* Set the padding for the element */
+    margin: 0 auto; /* Set the margin for the element. */
+    padding: 15px; /* Set the padding for the element. */
   }
 }
 
@@ -302,86 +302,86 @@ ul {
 
 #testimonialCarousel {
   margin: 4vh 0;
-  border-radius: 10px; /* Set the radius for the border of the element */
-  box-shadow: 0 4px 20px #0000001a; /* Set the shadow for the element */
-  overflow: hidden; /* Set the overflow for the element */
-  background-color: #f8f9fa; /* Set the background color for the element */
+  border-radius: 10px; /* Set the radius for the border of the element. */
+  box-shadow: 0 4px 20px #0000001a; /* Set the shadow for the element. */
+  overflow: hidden; /* Set the overflow for the element. */
+  background-color: #f8f9fa; /* Set the background color for the element. */
 }
 
 .carousel-inner {
-  padding: 20px; /* Set the padding for the element */
+  padding: 20px; /* Set the padding for the element. */
 }
 
 .testimonial {
   border: none !important;
   padding: 0 37px !important;
-  font-size: 1.2rem !important; /* Set the size for the font of the element */
-  text-align: center !important; /* Center the text for the element */
+  font-size: 1.2rem !important; /* Set the size for the font of the element. */
+  text-align: center !important; /* Center the text for the element. */
   transition: none !important;
 }
 
 .testimonial:hover {
-  background-color: #f8f9fa !important; /* Set the color for the background of the element */
+  background-color: #f8f9fa !important; /* Set the color for the background of the element. */
 }
 
 .carousel-control-prev-icon,
 .carousel-control-next-icon {
-  background-color: #007bff; /* Set the color for the background of the element */
-  border-radius: 50%; /* Set the radius for the border of the element */
+  background-color: #007bff; /* Set the color for the background of the element. */
+  border-radius: 50%; /* Set the radius for the border of the element. */
 }
 
 .carousel-control-prev,
 .carousel-control-next {
-  width: 5%; /* Set the width for the element */
+  width: 5%; /* Set the width for the element. */
 }
 
 .carousel-control-prev:hover,
 .carousel-control-next:hover {
-  background-color: #007bff1a !important; /* Set the color for the background of the element */
+  background-color: #007bff1a !important; /* Set the color for the background of the element. */
 }
 
 .carousel-item {
-  transition: transform 0.5s ease; /* Set the transition for the element */
+  transition: transform 0.5s ease; /* Set the transition for the element. */
 }
 
 .carousel-item.active {
-  opacity: 1; /* Set the opacity for the element */
+  opacity: 1; /* Set the opacity for the element. */
 }
 
 #newsletter {
-  border-radius: 10px; /* Set the radius for the border of the element */
-  padding: 50px; /* Set the padding for the element */
-  box-shadow: 0 4px 20px #0000001a; /* Set the shadow for the element */
+  border-radius: 10px; /* Set the radius for the border of the element. */
+  padding: 50px; /* Set the padding for the element. */
+  box-shadow: 0 4px 20px #0000001a; /* Set the shadow for the element. */
 }
 
 #newsletter h2 {
-  font-size: 2rem; /* Set the size for the font of the element */
-  color: #007bff; /* Set the color for the text of the element */
+  font-size: 2rem; /* Set the size for the font of the element. */
+  color: #007bff; /* Set the color for the text of the element. */
 }
 
 #newsletter p {
-  font-size: 1.1rem; /* Set the size for the font of the element */
-  margin-bottom: 20px; /* Set the size for the bottom margin of the element */
+  font-size: 1.1rem; /* Set the size for the font of the element. */
+  margin-bottom: 20px; /* Set the size for the bottom margin of the element. */
 }
 
 .form-control {
-  border-radius: 20px; /* Set the radius for the border of the element */
-  border: 1px solid #007bff; /* Set the border for the element */
+  border-radius: 20px; /* Set the radius for the border of the element. */
+  border: 1px solid #007bff; /* Set the border for the element. */
 }
 
 .btn-primary {
-  padding: 10px 20px; /* Set the padding for the element */
-  border-radius: 20px; /* Set the radius for the border of the element */
+  padding: 10px 20px; /* Set the padding for the element. */
+  border-radius: 20px; /* Set the radius for the border of the element. */
 }
 
 .btn-primary:hover {
-  background-color: #0057b3; /* Set the color for the background of the element */
-  border-color: #0057b3; /* Set the color for the border of the element */
+  background-color: #0057b3; /* Set the color for the background of the element. */
+  border-color: #0057b3; /* Set the color for the border of the element. */
 }
 
 #custom-cards,
 #badge-grid {
-  padding: 5vh 25px 17.37vh !important; /* Set the padding for the element */
+  padding: 5vh 25px 17.37vh !important; /* Set the padding for the element. */
   background-image: url(../images/background.jpg);
   background-position: center;
   background-repeat: no-repeat;
@@ -391,15 +391,15 @@ ul {
 }
 
 #badge-grid {
-  padding: 50px; /* Set the padding for the element */
-  border-radius: 10px; /* Set the border radius for the element */
-  background-color: #ffffffcc; /* Set the background color for the element */
-  box-shadow: 0 8px 20px #00000037; /* Set the shadow for the element */
+  padding: 50px; /* Set the padding for the element. */
+  border-radius: 10px; /* Set the border radius for the element. */
+  background-color: #ffffffcc; /* Set the background color for the element. */
+  box-shadow: 0 8px 20px #00000037; /* Set the shadow for the element. */
 }
 
 @media (max-width: 600px) {
   #badge-grid {
-    padding: 20px; /* Set the padding for the element */
+    padding: 20px; /* Set the padding for the element. */
   }
 }
 
@@ -410,34 +410,34 @@ ul {
 }
 
 #badge-grid .col {
-  margin: 10px; /* Set the margin for the element */
-  padding: 15px; /* Set the padding for the element */
-  align-items: center; /* Set the alignment for the items */
-  text-align: center; /* Set the alignment for the text */
-  border-radius: 10px; /* Set the border radius for the element */
-  box-shadow: 0 4px 10px #00000037; /* Set the shadow for the element */
-  background-color: #3577ffa7; /* Set the background color for the element */
-  transition: transform 0.25s, box-shadow 0.25s; /* Set the transition for the element */
-  /* Use flexbox to center content inside the element */
-  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
-  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
-  display: flex; /* Standard syntax for modern browsers (widely supported) */
-  flex-direction: column; /* Set the directtion for the items */
-  align-items: center !important; /* Center align items horizontally */
+  margin: 10px; /* Set the margin for the element. */
+  padding: 15px; /* Set the padding for the element. */
+  align-items: center; /* Set the alignment for the items. */
+  text-align: center; /* Set the alignment for the text. */
+  border-radius: 10px; /* Set the border radius for the element. */
+  box-shadow: 0 4px 10px #00000037; /* Set the shadow for the element. */
+  background-color: #3577ffa7; /* Set the background color for the element. */
+  transition: transform 0.25s, box-shadow 0.25s; /* Set the transition for the element. */
+  /* Use flexbox to center content inside the element. */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
+  flex-direction: column; /* Set the directtion for the items. */
+  align-items: center !important; /* Center align items horizontally. */
 }
 
-/* Hover Effect */
+/* Hover Effect. */
 #badge-grid .col:hover {
-  transform: translateY(-5px); /* Lift effect on hover */
-  box-shadow: 0 12px 30px #00000037; /* Enhanced shadow on hover */
+  transform: translateY(-5px); /* Lift effect on hover. */
+  box-shadow: 0 12px 30px #00000037; /* Enhanced shadow on hover. */
 }
 
-/* Responsive Styles */
+/* Responsive Styles. */
 
 @media (max-width: 1280px) {
   #custom-cards,
   #badge-grid {
-    padding: 5vh 25px 15vh !important; /* Set the padding for the element */
+    padding: 5vh 25px 15vh !important; /* Set the padding for the element. */
   }
 }
 
@@ -449,14 +449,14 @@ ul {
 
 @media (max-width: 600px) {
   .card {
-    margin: 10px; /* Set the margin for the element */
+    margin: 10px; /* Set the margin for the element. */
   }
 }
 
 @media (max-width: 600px) {
   #custom-cards,
   #badge-grid {
-    padding: 7vh 25px 10vh !important; /* Set the padding for the element */
+    padding: 7vh 25px 10vh !important; /* Set the padding for the element. */
   }
 }
 
@@ -467,10 +467,10 @@ footer {
   padding: 20px 50px;
   background-color: #3586ff;
   color: #ffffff;
-  /* Use flexbox to center content inside the element */
-  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
-  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
-  display: flex; /* Standard syntax for modern browsers (widely supported) */
+  /* Use flexbox to center content inside the element. */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -493,10 +493,10 @@ footer .menu {
   position: relative;
   margin: 0;
   padding-top: 10px;
-  /* Use flexbox to center content inside the element */
-  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model */
-  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox) */
-  display: flex; /* Standard syntax for modern browsers (widely supported) */
+  /* Use flexbox to center content inside the element. */
+  display: -ms-flexbox; /* For Internet Explorer 10 (supports an earlier flexbox model. */
+  display: -webkit-box; /* For earlier versions of Chrome and Safari (pre-flexbox). */
+  display: flex; /* Standard syntax for modern browsers (widely supported). */
   justify-content: center;
   align-items: center;
 }
@@ -534,7 +534,7 @@ footer a:hover {
   color: #ffffff;
 }
 
-/* The Wave Animation */
+/* The Wave Animation. */
 
 footer .wave {
   position: absolute;
