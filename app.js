@@ -14,9 +14,19 @@
  */
 
 import express from "express";
+import path from "path";
+import fs from "fs";
+import { fileURLToPath } from "url";
+import pkg from "twig";
 
 const app = express();
 const port = 3000;
+const __filename = fileURLToPath(import.meta.url);
+const __dirname = path.dirname(__filename);
+const { twig } = pkg;
+
+app.set("view engine", "ejs");
+app.set("views", path.join(__dirname, "views"));
 
 // Serve static files
 app.use(express.static("public"));
@@ -26,7 +36,23 @@ app.use(express.json());
 
 // Home page route
 app.get("/", (req, res) => {
-  res.render("index.ejs");
+  const brandTitlePath = path.join(
+    __dirname,
+    "views",
+    "partials",
+    "brand-title.twig"
+  );
+  const brandTitle = fs.readFileSync(brandTitlePath, "utf8");
+
+  const rendered = twig({ data: brandTitle }).render({
+    title: "Ocean-Minded",
+    subtitle: "Your Way to Beautiful Journeys",
+    imageClass: "logo img-fluid",
+    imageSrc: "images/logo.jpg",
+    imageAlt: "The Ocean-Minded Logo Image",
+  });
+
+  res.render("index.ejs", { brandTitle: rendered });
 });
 
 // About page route
