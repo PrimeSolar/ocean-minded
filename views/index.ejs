@@ -1,14 +1,12 @@
 <%- include("partials/header.ejs") %>
 
 <main class="container">
+  <noscript
+    >Ensure JavaScript is enabled for the best application
+    performance.</noscript
+  >
   <div class="text-center">
-    <h1 class="title">Ocean-Minded</h1>
-    <h2 class="pt-0 pb-5">Your Way to Beautiful Journeys</h2>
-    <img
-      class="logo img-fluid"
-      src="images/logo.jpg"
-      alt="The Ocean-Minded Logo Image"
-    />
+    <%- brandTitle %>
     <p class="lead">
       We create wonderful travel experiences that connect you with the amazing
       beauty of the ocean world. Let us guide you on a journey where adventure
@@ -53,7 +51,9 @@
             alt="Caribbean Beach"
           />
           <div class="card-body">
-            <h5 class="card-title">🌴 Caribbean Beauty</h5>
+            <h3 class="card-title">
+              <span aria-hidden="true">🌴</span> Caribbean Beauty
+            </h3>
             <p class="card-text">
               Experience the stunning beaches and vibrant marine life of the
               Caribbean, where the sky looks like a canvas of brilliant colors.
@@ -72,7 +72,9 @@
             alt="Pacific Northwest Coast"
           />
           <div class="card-body">
-            <h5 class="card-title">🏞️ Pacific Northwest</h5>
+            <h3 class="card-title">
+              <span aria-hidden="true">🏞️</span> Pacific Northwest
+            </h3>
             <p class="card-text">
               Explore the lush landscapes of the Pacific Northwest, where
               mountains meet the sea in a wonderful embrace.
@@ -91,7 +93,9 @@
             alt="Mediterranean Sea"
           />
           <div class="card-body">
-            <h5 class="card-title">🌊 Mediterranean Bliss</h5>
+            <h3 class="card-title">
+              <span aria-hidden="true">🌊</span> Mediterranean Bliss
+            </h3>
             <p class="card-text">
               Sail through the crystal-clear waters and discover the culture of
               the Mediterranean, where history and beauty meet.
@@ -110,7 +114,9 @@
             alt="Hawaii Waters"
           />
           <div class="card-body">
-            <h5 class="card-title">☀️ Wonderful Hawaii</h5>
+            <h3 class="card-title">
+              <span aria-hidden="true">☀️</span> Wonderful Hawaii
+            </h3>
             <p class="card-text">
               Visit a place of wonderful landscapes, lush forests, pristine
               beaches, vibrant marine life, and rich culture.
@@ -134,10 +140,18 @@
       experts is here to craft the perfect ocean adventure just for you.
     </p>
     <ul class="list-group">
-      <li class="list-group-item">🌊 Custom Sailing Trips</li>
-      <li class="list-group-item">🐠 Snorkeling and Diving Adventures</li>
-      <li class="list-group-item">🏖️ Relaxing Ocean Beaches</li>
-      <li class="list-group-item">🌅 Eco-Tours and Wildlife Watching</li>
+      <li class="list-group-item">
+        <span aria-hidden="true">🌊</span> Custom Sailing Trips
+      </li>
+      <li class="list-group-item">
+        <span aria-hidden="true">🐠</span> Snorkeling and Diving Adventures
+      </li>
+      <li class="list-group-item">
+        <span aria-hidden="true">🏖️</span> Relaxing Ocean Beaches
+      </li>
+      <li class="list-group-item">
+        <span aria-hidden="true">🌅</span> Eco-Tours and Wildlife Watching
+      </li>
     </ul>
   </section>
 
