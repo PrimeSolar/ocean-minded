@@ -1,1 +1,1 @@
-const p=document.getElementsByTagName("p");for(let n of p)n.classList.contains("card-text")||n.classList.contains("testimonial")||null!=n.closest(".center")||(n.innerHTML="<indent></indent>"+n.innerHTML);
+document.addEventListener("DOMContentLoaded",(()=>{const e=document.getElementsByTagName("p");for(let n of e)n.classList.contains("card-text")||n.classList.contains("testimonial")||n.parentElement.previousElementSibling.classList.contains("teammate")||null!==n.closest(".center")||(n.innerHTML="&nbsp;&nbsp;"+n.innerHTML)}));
