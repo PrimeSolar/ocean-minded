@@ -3,7 +3,7 @@
  * This file is the library containing my collection of custom, reusable web components
  * that can be used across different parts of the project. These components go beyond what browsers provide,
  * allowing for expanded capabilities and functionality in the project.
- * 
+ *
  * Copyright © Vladislav Kazantsev
  * All rights reserved.
  * This code is the intellectual property of Vladislav Kazantsev.
@@ -16,29 +16,34 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-// The Scroll to Top Button
-class ToTop extends HTMLElement {
-  connectedCallback() {
-    this.innerHTML += `
-      <a href="#" aria-label="Scroll to top" title="Scroll to top">
-        <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-          <path d="M6 15L12 9L18 15" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
-        </svg>
-      </a>
-      `;
-  }
-}
-customElements.define("to-top", ToTop);
+/** The scroll to top button. */
+(function ($) {
+  const createToTopElement = function () {
+    const $toTop = $("<to-top>", {
+      html: `
+              <a href="#" aria-label="Scroll to top" title="Scroll to top">
+                  <svg width="45px" height="45px" viewBox="0 0 24 24" fill="none" xmlns="www.w3.org/2000/svg">
+                      <path d="M6 15L12 9L18 15" stroke="#fff" stroke-width="1" stroke-linecap="round" stroke-linejoin="round"/>
+                  </svg>
+              </a>
+          `,
+    });
 
-const toTop = document
-  .querySelector("body")
-  .appendChild(document.createElement("to-top"));
-window.addEventListener("scroll", () => {
-  if (window.pageYOffset > 100) {
-    toTop.classList.add("active");
-  } else {
-    toTop.classList.remove("active");
-  }
-});
+    $("body").append($toTop);
 
-console.log("components.js is completed");
+    return $toTop;
+  };
+
+  const $toTop = createToTopElement();
+
+  /** The scroll event listener. */
+  $(window).on("scroll", function () {
+    if ($(window).scrollTop() > 100) {
+      $toTop.addClass("active");
+    } else {
+      $toTop.removeClass("active");
+    }
+  });
+
+  console.log("components.js is completed");
+})(jQuery);
