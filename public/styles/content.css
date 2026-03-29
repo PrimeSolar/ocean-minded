@@ -131,15 +131,6 @@ a.btn-primary {
   padding-right: 15px;
 }
 
-@media (max-width: 600px) {
-  .col-md-4,
-  .odd-cards .col-md-4,
-  .even-cards .col-md-4 {
-    flex: none;
-    max-width: 100%;
-  }
-}
-
 /* The Title Style Rules. */
 
 h1 {
@@ -169,17 +160,26 @@ h1.title {
   height: 500px;
 }
 
+.map-controls {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-bottom: 56px;
+}
+
+.map-controls * {
+  text-align: center;
+}
+
+.map-controls button {
+  margin-top: 10px;
+}
+
 #custom-cards .title,
 #badge-grid .title,
 .hero h1.title {
   color: #ffffff;
   -webkit-text-fill-color: unset;
-}
-
-@media (max-width: 600px) {
-  .title {
-    font-size: 2em; /* Set the size for the font of the element. */
-  }
 }
 
 h2 {
@@ -335,6 +335,27 @@ to-top.active {
   bottom: calc(15vh + 175px);
   pointer-events: auto;
   opacity: 1;
+}
+
+@media (max-width: 600px) {
+  .title {
+    font-size: 2em; /* Set the size for the font of the element. */
+  }
+
+  .col-md-4,
+  .odd-cards .col-md-4,
+  .even-cards .col-md-4 {
+    flex: none;
+    max-width: 100%;
+  }
+
+  #map {
+    width: 75%;
+  }
+
+  to-top {
+    right: 10px;
+  }
 }
 
 @media (max-width: 500px) {
