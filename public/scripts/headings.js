@@ -25,8 +25,12 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-/** Select the headings and log them. */
+/** Select the headings and log them in reading order to audit page structure. */
 const headings = [...document.querySelectorAll("h1, h2, h3, h4, h5, h6")];
+/**
+ * The script includes detailed comments
+ * to support stakeholders with varying JS knowledge.
+ */
 headings.forEach((heading, index) => {
   console.log(
     `${index + 1}: ${heading.tagName} - ${heading.textContent.trim()}`
