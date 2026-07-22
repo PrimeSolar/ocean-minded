@@ -16,8 +16,12 @@
  * For inquiries about collaboration, usage outside exploratory purposes, or permissions, please contact: hypervisor7@pm.me
  */
 
-/** The scroll to top button. */
 (function ($) {
+  /**
+   * The script includes detailed comments
+   * to support stakeholders with varying JS knowledge.
+   */
+  /** The "Scroll to top" button. */
   const createToTopElement = function () {
     const $toTop = $("<to-top>", {
       html: `
