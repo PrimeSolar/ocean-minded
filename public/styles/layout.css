@@ -22,6 +22,8 @@
   font-family: "Poppins", sans-serif;
 }
 
+/* The style sheet includes detailed property comments
+to support stakeholders with varying CSS knowledge. */
 body {
   line-height: 1.6; /* Set the line height for the element. */
   background-image: url(../images/background.jpg);
