@@ -262,6 +262,7 @@ p {
   display: inline-block !important; /* Set the position for the element. */
   margin: 10px 0 15px;
   width: 170px; /* Set the width for the element. */
+  max-width: 100%;
   height: 170px; /* Set the height for the element. */
   background-size: cover; /* Set the size for the background of the element. */
   background-position: center; /* Set the position for the background of the element. */
