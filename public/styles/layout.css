@@ -405,6 +405,11 @@ ul {
   }
 }
 
+.team {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(min(370px, 100%), 1fr));
+}
+
 #custom-cards p,
 #badge-grid p,
 #badge-grid h3 {
