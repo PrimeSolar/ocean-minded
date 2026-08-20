@@ -6,7 +6,7 @@
     extent.</noscript
   >
   <div class="hero">
-    <h1 class="title pb-2">Embrace the Beauty of Hawaii</h1>
+    <h1 class="title pb-2" itemprop="headline">Embrace the Beauty of Hawaii</h1>
   </div>
   <div class="container my-4">
     <h2 class="mt-4">Welcome to Hawaii</h2>
@@ -44,7 +44,7 @@
             <p class="testimonial">
               "Exploring Hawaii with Ocean-Minded was a dream come true! The
               beautiful landscapes and rich culture made our trip wonderful." -
-              <strong>Giulia M.</strong>
+              <strong>Julia M.</strong>
             </p>
           </div>
           <div class="carousel-item">
@@ -133,8 +133,8 @@
   document.addEventListener("DOMContentLoaded", function () {
     const map = new maplibregl.Map({
       container: "map",
-      style: "https://demotiles.maplibre.org/style.json", // MapLibre style
-      center: [-157, 20.8], // Longitude, Latitude for Hawaii
+      style: "https://demotiles.maplibre.org/style.json" /** MapLibre style. */,
+      center: [-157, 20.8] /** Longitude, Latitude for Hawaii. */,
       zoom: 6,
     });
 
@@ -185,7 +185,7 @@
           new maplibregl.Popup().setText(
             `${location.name}: ${location.activities}`
           )
-        ) // Add popups with activities
+        ) /** Add popups with activities. */
         .addTo(map);
     });
   });
