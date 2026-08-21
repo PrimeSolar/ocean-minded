@@ -6,7 +6,9 @@
     experience.</noscript
   >
   <div class="hero">
-    <h1 class="title pb-2">Embrace the Mediterranean Sea</h1>
+    <h1 class="title pb-2" itemprop="headline">
+      Embrace the Mediterranean Sea
+    </h1>
   </div>
   <div class="container my-4">
     <h2 class="mt-4">Welcome to the Mediterranean</h2>
@@ -45,7 +47,7 @@
               "Exploring the Mediterranean with Ocean-Minded was a dream come
               true! The beautiful coastlines and rich history made our trip
               wonderful." -
-              <strong>Giulia M.</strong>
+              <strong>Julia M.</strong>
             </p>
           </div>
           <div class="carousel-item">
@@ -134,8 +136,8 @@
   document.addEventListener("DOMContentLoaded", function () {
     const map = new maplibregl.Map({
       container: "map",
-      style: "https://demotiles.maplibre.org/style.json", // MapLibre style
-      center: [14, 38], // Longitude, Latitude for Mediterranean
+      style: "https://demotiles.maplibre.org/style.json" /** MapLibre style. */,
+      center: [14, 38] /** Longitude, latitude for Mediterranean. */,
       zoom: 4,
     });
 
@@ -191,7 +193,7 @@
           new maplibregl.Popup().setText(
             `${location.name}: ${location.activities}`
           )
-        ) // Add popups with activities
+        ) /** Add popups with activities. */
         .addTo(map);
     });
   });
