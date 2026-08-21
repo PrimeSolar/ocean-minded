@@ -6,7 +6,9 @@
     application.</noscript
   >
   <div class="hero">
-    <h1 class="title pb-2">Explore the Pacific Northwest</h1>
+    <h1 class="title pb-2" itemprop="headline">
+      Explore the Pacific Northwest
+    </h1>
   </div>
   <div class="container my-4">
     <h2 class="mt-4">Welcome to the Pacific Northwest</h2>
@@ -134,8 +136,8 @@
   document.addEventListener("DOMContentLoaded", function () {
     const map = new maplibregl.Map({
       container: "map",
-      style: "https://demotiles.maplibre.org/style.json", // MapLibre style
-      center: [-124, 48], // Longitude, Latitude for Pacific Northwest
+      style: "https:demotiles.maplibre.org/style.json" /** MapLibre style. */,
+      center: [-124, 48] /** Longitude, latitude for Pacific Northwest. */,
       zoom: 5,
     });
 
@@ -179,7 +181,7 @@
           new maplibregl.Popup().setText(
             `${location.name}: ${location.activities}`
           )
-        ) // Add popups with activities
+        ) /** Add popups with activities. */
         .addTo(map);
     });
   });
