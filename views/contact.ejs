@@ -4,22 +4,29 @@
   <noscript
     >Turn on JavaScript to enhance your application experience.</noscript
   >
-  <h1 class="title">Contact Us</h1>
-  <form>
-    <input name="name" type="text" class="feedback-input" placeholder="Name" />
-    <input
-      name="email"
-      type="text"
-      class="feedback-input"
-      placeholder="Email"
-    />
-    <textarea
-      name="text"
-      class="feedback-input"
-      placeholder="Comment"
-    ></textarea>
-    <input type="submit" value="SUBMIT" />
-  </form>
+  <article>
+    <h1 class="title" itemprop="headline">Contact Us</h1>
+    <form>
+      <input
+        name="name"
+        type="text"
+        class="feedback-input"
+        placeholder="Name"
+      />
+      <input
+        name="email"
+        type="text"
+        class="feedback-input"
+        placeholder="Email"
+      />
+      <textarea
+        name="text"
+        class="feedback-input"
+        placeholder="Comment"
+      ></textarea>
+      <input type="submit" value="SUBMIT" />
+    </form>
+  </article>
 </main>
 
 <%- include("partials/footer.ejs") %>
